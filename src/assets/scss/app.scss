@@ -1,0 +1,34 @@
+// Mixins
+@import './mixins/bp';
+@import './mixins/text';
+@import './mixins/spacing';
+// Settings
+@import './settings/variables';
+@import './settings/reset';
+@import './settings/fonts';
+// Animations
+@import './animations/list';
+@import './animations/slide';
+@import './animations/appear';
+@import './animations/pop-up';
+
+*, *:before, *.after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(ellipse at center, $color-background 0%, $color-background-dark 100%);
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    overflow: hidden;
+    color: $color-font-light;
+    font-family: $font-default, Helvetica, Arial, sans-serif;
+}
