@@ -1,12 +1,15 @@
 <template>
     <div id="app">
-        hello world
+        <hero-bubbles>
+            hello bubbles
+        </hero-bubbles>
     </div>
 </template>
 
 <script>
+    import HeroBubbles from './components/layout/HeroBubbles';
     export default {
         name:       'app',
-        components: {}
+        components: { HeroBubbles }
     };
 </script>

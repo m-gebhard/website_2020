@@ -6,6 +6,8 @@
 @import './settings/variables';
 @import './settings/reset';
 @import './settings/fonts';
+// Components
+@import './components/hero-bubbles';
 // Animations
 @import './animations/list';
 @import './animations/slide';
@@ -18,7 +20,7 @@
 
 body {
     margin: 0;
-    background: radial-gradient(ellipse at center, $color-background 0%, $color-background-dark 100%);
+    background: radial-gradient(ellipse at center, $color-background, $color-background-dark);
 }
 
 #app {
