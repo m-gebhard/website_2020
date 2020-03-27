@@ -7,8 +7,10 @@
                 <p class="profile__item-description">
                     My Name is Marius Gebhard.<br>
                     I am 22 years old and I live in Mannheim, Germany.
-                    In my free time I'd like to code and do sports, graphics and UI design is also really interesting to
-                    me.
+                    In my free time I like to code and do sports.
+                    What do I code? Anything you can imagine - it just depends on the project I am working on.
+                    Sports? I like to go to the gym.
+                    Graphics and UI design is also really interesting to me.
                 </p>
             </li>
             <li class="profile__item">
@@ -26,7 +28,7 @@
                 <font-awesome-icon icon="chart-bar"></font-awesome-icon>
                 <h3>What can I offer?</h3>
                 <p class="profile__item-description">
-                    Years of experience, passion and a wide variety of programming languages in different sectors
+                    Years of experience, passion and a wide variety of programming skills in different languages:
                 </p>
                 <ul class="profile__item-chart">
                     <li v-for="(skill, i) in skills"
