@@ -10,13 +10,15 @@
 }
 
 .custom-footer__content {
-    @include spacing(padding, m, top bottom);
     @include spacing(padding, l, left right);
+    @include spacing(padding, l, top);
+    @include spacing(padding, m, bottom);
 
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     width: 100%;
+    padding-top: 50px;
 
     background: $color-background;
 
@@ -35,6 +37,7 @@
 
 .custom-footer__anchor-list {
     width: 100%;
+    margin-bottom: 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
