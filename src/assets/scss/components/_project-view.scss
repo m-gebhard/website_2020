@@ -16,7 +16,7 @@
 
     cursor: pointer;
     user-select: none;
-    background: darken($color-background, 3%);
+    background: darken($color-background-dark, 3%);
     border-radius: $border-radius-default;
 
     //&:after {

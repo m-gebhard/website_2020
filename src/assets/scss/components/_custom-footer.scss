@@ -1,0 +1,66 @@
+.custom-footer {
+    @include text(p3);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+
+    background: $color-background;
+}
+
+.custom-footer__content {
+    @include spacing(padding, s, top bottom);
+    @include spacing(padding, l, left right);
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+
+    background: $color-background;
+
+    @include bp(m) {
+        flex-flow: row nowrap;
+    }
+
+    @include bp(l) {
+        max-width: 80vw;
+    }
+
+    @include bp(xl) {
+        max-width: 1200px;
+    }
+}
+
+.custom-footer__anchor-list {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-left: auto;
+
+    @include bp(m) {
+        width: auto;
+    }
+}
+
+.custom-footer__anchor-list-item {
+    @include spacing(margin, s, left);
+    @include text(p1);
+
+    a {
+        @include spacing(padding, xs);
+
+        svg {
+            color: $color-primary;
+            transition: color $transition-regular;
+        }
+    }
+
+    @include bp(m) {
+        &:hover a svg {
+            color: rgba($color-secondary, 0.5);
+        }
+    }
+}

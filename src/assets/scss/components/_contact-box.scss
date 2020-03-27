@@ -99,6 +99,7 @@
 
     order: 1;
     flex: 1;
+    text-align: center;
 
     &:after {
         position: absolute;
@@ -143,7 +144,7 @@
     }
 
     span, a {
-        @include spacing(margin, s, right);
+        @include spacing(margin, xs, right);
         text-decoration: none;
         color: $color-primary;
 

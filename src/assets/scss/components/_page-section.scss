@@ -1,15 +1,21 @@
 .page-section {
-    @include spacing(padding, l, top bottom);
-    @include spacing(padding, l, left right);
+    @include spacing(padding, l);
 
     width: 100%;
-    max-width: 1200px;
     min-height: 50vh;
     text-align: center;
     border-radius: $border-radius-default;
 
     @include bp(m) {
         text-align: left;
+    }
+
+    @include bp(l) {
+        max-width: 80vw;
+    }
+
+    @include bp(xl) {
+        max-width: 1200px;
     }
 }
 
