@@ -31,7 +31,7 @@ h2 {
         }
     }
 
-    @include bp(m) {
+    @include bp(l) {
         text-align: left;
 
         &:after {
@@ -44,6 +44,11 @@ h2 {
 
 h3 {
     @include text(h3);
+
+    span {
+        color: $color-accent;
+        font-weight: 900;
+    }
 }
 
 hr {

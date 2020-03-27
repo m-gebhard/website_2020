@@ -4,6 +4,7 @@
 
     @include bp(l) {
         flex-flow: row wrap;
+        align-items: flex-start;
     }
 }
 
@@ -103,7 +104,7 @@
 }
 
 .contact-box__details {
-    @include spacing(padding, s);
+    @include spacing(padding, m);
 
     position: relative;
     display: flex;
@@ -113,20 +114,9 @@
     order: 1;
     flex: 1;
     text-align: center;
+    border-radius: $border-radius-default;
+    background: none;
 
-    &:after {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-
-        content: '';
-        display: block;
-        width: 50%;
-        height: 1px;
-        opacity: 0.5;
-        background: $color-accent;
-        transform: translateX(-50%);
-    }
 
     h3 {
         @include spacing(padding, s, bottom);
@@ -134,6 +124,7 @@
 
     @include bp(l) {
         order: 2;
+        margin-top: 35px;
 
         &:after {
             left: 0;
@@ -144,9 +135,20 @@
     }
 }
 
+.contact-box__details-info {
+    @include spacing(margin, xs, bottom);
+    @include text(p3);
+
+    width: 60%;
+
+    @include bp(m) {
+        width: 75%;
+    }
+}
+
 .contact-box__details-item {
-    @include spacing(margin, m, top);
-    @include text(p2);
+    @include spacing(margin, s, top);
+    @include text(p3);
 
     display: flex;
     align-items: center;
@@ -154,12 +156,13 @@
 
     svg {
         color: lighten($color-font-light, 20%);
+        opacity: 0.75;
     }
 
     span, a {
         @include spacing(margin, xs, right);
         text-decoration: none;
-        color: $color-primary;
+        color: $color-accent;
 
         span {
             color: lighten($color-font-light, 25%);

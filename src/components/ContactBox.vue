@@ -26,7 +26,10 @@
             </button>
         </form>
         <div class="contact-box__details">
-            <h3>Say Hello!</h3>
+            <h3>Say <span>Hello</span>!</h3>
+            <p class="contact-box__details-info">
+                Contact me and I’ll get back to you within a day.
+            </p>
             <div class="contact-box__details-item">
                 <span>Mannheim, <span>Germany</span></span>
                 <font-awesome-icon icon="compass"></font-awesome-icon>
