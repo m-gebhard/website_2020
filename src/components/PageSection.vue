@@ -1,5 +1,5 @@
 <template>
-    <div class="page-section" :class="classes">
+    <div class="page-section" :id="getId" :class="classes">
         <div class="page-section__content">
             <h2 v-if="title" class="page-section__content-title">
                 {{ title }}
@@ -30,7 +30,10 @@
                     ['page-section--grey']: this.dark,
                     ['page-section--edge']: this.edge,
                 };
-            }
+            },
+            getId() {
+                return `page-section-${this.title.replace('/\\d{4}\\/[A-Z]{1,2}\\d{2}/\n', '').toLowerCase()}`;
+            },
         },
     };
 </script>

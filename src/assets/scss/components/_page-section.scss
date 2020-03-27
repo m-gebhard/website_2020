@@ -1,4 +1,5 @@
 .page-section {
+    position: relative;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -7,6 +8,14 @@
 
     @include bp(m) {
         text-align: left;
+    }
+}
+
+.page-section--active {
+    .contact-box {
+        .scroll-top {
+            opacity: 1;
+        }
     }
 }
 

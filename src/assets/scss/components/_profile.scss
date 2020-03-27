@@ -1,0 +1,69 @@
+.profile {
+
+}
+
+.profile__wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+
+    @include bp(m) {
+        flex-flow: row nowrap;
+    }
+}
+
+.profile__item {
+    @include spacing(margin, s, right);
+    @include spacing(padding, s);
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+    text-align: center;
+    background: $color-background-dark;
+    border-radius: $border-radius-default;
+
+    svg {
+        @include spacing(margin, s, bottom);
+        @include text(h2);
+        color: $color-primary;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.profile__item-description {
+    @include spacing(margin, s, top);
+    @include text(p3);
+}
+
+.profile__item-chart {
+    @include spacing(margin, s, top);
+
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    min-height: 80px;
+}
+
+.profile__item-chart-item {
+    @include spacing(margin, xs, right);
+    @include spacing(padding, xs, top);
+    @include text(p3);
+
+    flex: 1;
+    margin: 0;
+    margin-top: auto;
+    user-select: none;
+    border-radius: $border-radius-default;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}

@@ -36,12 +36,18 @@
                 <font-awesome-icon icon="at"></font-awesome-icon>
             </div>
         </div>
+        <div class="contact-box__scroll-top">
+            <scroll-top></scroll-top>
+        </div>
     </div>
 </template>
 
 <script>
+    import ScrollTop from './ScrollTop';
+
     export default {
-        name:    'contact-box',
+        name:       'contact-box',
+        components: { ScrollTop },
         data() {
             return {
                 inputName:    '',
@@ -49,7 +55,7 @@
                 inputMessage: '',
             };
         },
-        methods: {
+        methods:    {
             onSubmit() {
             }
         },

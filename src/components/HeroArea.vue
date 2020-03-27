@@ -1,5 +1,5 @@
 <template>
-    <section class="hero-area">
+    <section class="page-section hero-area">
         <font-awesome-icon class="hero-area__icon"
                            icon="code">
         </font-awesome-icon>

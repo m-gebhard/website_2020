@@ -7,6 +7,18 @@
     }
 }
 
+.contact-box__scroll-top {
+    @include spacing(margin, l, top);
+
+    display: flex;
+    justify-content: center;
+    order: 3;
+
+    .scroll-top {
+        align-self: center;
+    }
+}
+
 .contact-box__form {
     @include spacing(margin, l, top);
 
@@ -25,7 +37,7 @@
 .contact-box__form-submit {
     @include spacing(padding, l, left right);
     @include spacing(padding, s, top bottom);
-    @include spacing(margin, m, top);
+    @include spacing(margin, m, top bottom);
 
     width: 100%;
     cursor: pointer;
