@@ -1,3 +1,8 @@
+.project-view {
+    display: flex;
+    flex-flow: column wrap;
+}
+
 .project-view__list {
     display: flex;
     flex-flow: column wrap;
@@ -5,6 +10,33 @@
     @include bp(m) {
         flex-flow: row wrap;
     }
+}
+
+.project-view__filter {
+    @include spacing(margin, s, bottom);
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: auto;
+
+    svg {
+        @include spacing(margin, s, right);
+        @include text(p2);
+
+        color: $color-primary;
+    }
+}
+
+.project-view__filter-select {
+    @include spacing(padding, xs);
+    @include spacing(padding, s, left right);
+    @include text(p3);
+
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    background: darken($color-background-dark, 5%);
 }
 
 .project-view__list-item {
