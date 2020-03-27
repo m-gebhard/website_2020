@@ -12,7 +12,8 @@
 
     text-align: center;
     color: $color-white;
-    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 96%, 0 100%, 0 0);
+    // clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 96%, 0 100%, 0 0);
+    clip-path: polygon(0 0, 50% 4%, 100% 0, 100% 50%, 100% 100%, 50% 96%, 0 100%, 0 50%);
     background: linear-gradient(50deg, lighten($color-primary, 15%), lighten($color-primary, 25%), $color-accent);
 }
 

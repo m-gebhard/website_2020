@@ -35,9 +35,10 @@
 }
 
 .contact-box__form-submit {
-    @include spacing(padding, l, left right);
+    @include spacing(padding, m, left right);
     @include spacing(padding, s, top bottom);
     @include spacing(margin, m, top bottom);
+    @include text(p3);
 
     width: 100%;
     cursor: pointer;
