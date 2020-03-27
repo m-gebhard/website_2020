@@ -6,22 +6,24 @@
                     <label for="name">Name</label>
                     <input v-html="inputName"
                            id="name"
+                           required
                            type="text">
                 </div>
                 <div class="contact-box__input">
-                    <label for="name">E-Mail</label>
+                    <label for="name">Email</label>
                     <input v-html="inputEmail"
                            id="email"
+                           required
                            type="email">
                 </div>
             </div>
             <div class="contact-box__row">
                 <div class="contact-box__input">
                     <label for="message">Message</label>
-                    <textarea id="message"></textarea>
+                    <textarea required id="message"></textarea>
                 </div>
             </div>
-            <button class="contact-box__form-submit" type="submit">
+            <button disabled class="contact-box__form-submit" type="submit">
                 Submit
             </button>
         </form>

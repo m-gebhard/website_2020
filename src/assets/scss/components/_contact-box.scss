@@ -59,6 +59,11 @@
             background: darken($color-accent, 10%);
         }
     }
+
+    &:disabled {
+        cursor: not-allowed;
+        background: darken($color-white, 30%);
+    }
 }
 
 .contact-box__row {
