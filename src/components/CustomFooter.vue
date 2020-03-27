@@ -3,7 +3,7 @@
         <div class="custom-footer__content">
             <div class="custom-footer__copyright">
                 <span class="custom-footer__copyright-heart">
-                    Created with
+                    Made with
                     <font-awesome-icon icon="heart"></font-awesome-icon>
                     and
                     <font-awesome-icon icon="coffee"></font-awesome-icon>.

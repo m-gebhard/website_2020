@@ -7,13 +7,12 @@
     flex-flow: column wrap;
     align-items: stretch;
 
-    @include bp(m) {
+    @include bp(l) {
         flex-flow: row nowrap;
     }
 }
 
 .profile__item {
-    @include spacing(margin, s, right);
     @include spacing(padding, s);
 
     display: flex;
@@ -35,6 +34,17 @@
     &:last-of-type {
         margin-right: 0;
     }
+
+    @include bp(m) {
+        width: 75%;
+        align-self: center;
+        margin-right: 20px;
+    }
+
+    @include bp(l) {
+        width: auto;
+        align-self: stretch;
+    }
 }
 
 .profile__item-description {
@@ -43,13 +53,15 @@
 }
 
 .profile__item-chart {
-    @include spacing(margin, s, top);
+    @include spacing(margin, m, top);
 
     width: 100%;
+    height: 120px;
     margin: 0;
     display: flex;
     flex-flow: row nowrap;
     min-height: 80px;
+    margin-top: 10px;
 }
 
 .profile__item-chart-item {
@@ -57,13 +69,37 @@
     @include spacing(padding, xs, top);
     @include text(p3);
 
+    position: relative;
     flex: 1;
     margin: 0;
+    cursor: pointer;
     margin-top: auto;
     user-select: none;
     border-radius: $border-radius-default;
 
+    @include bp(m) {
+        &:hover:after {
+            opacity: 1;
+            background: lighten($color-primary, 5%);
+        }
+    }
+
     &:last-of-type {
         margin-right: 0;
+    }
+
+    &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        opacity: 0.25;
+        background: darken($color-background-dark, 50%);
+        border-radius: $border-radius-default $border-radius-default 0 0;
+        transition: background $transition-regular, opacity $transition-regular;
     }
 }

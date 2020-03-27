@@ -26,7 +26,7 @@
                 <font-awesome-icon icon="chart-bar"></font-awesome-icon>
                 <h3>What can I offer?</h3>
                 <p class="profile__item-description">
-                    I usually work with..
+                    Years of experience, passion and a wide variety of programming languages in different sectors
                 </p>
                 <ul class="profile__item-chart">
                     <li v-for="(skill, i) in skills"
@@ -50,31 +50,31 @@
                     {
                         name:       'PHP',
                         percentage: 75,
-                        color:      '#0b88e8'
+                        color:      '#c699ff'
                     },
                     {
                         name:       'HTML',
                         percentage: 80,
-                        color:      '#aa66ff'
+                        color:      '#abd8fb'
                     }, {
                         name:       'CSS',
                         percentage: 90,
-                        color:      '#aa66ff'
+                        color:      '#abd8fb'
                     },
                     {
                         name:       'JS',
                         percentage: 90,
-                        color:      '#0b88e8'
+                        color:      '#abd8fb'
                     },
                     {
                         name:       'Dart',
                         percentage: 60,
-                        color:      '#aa66ff'
+                        color:      '#c699ff'
                     },
                     {
                         name:       'C#',
                         percentage: 60,
-                        color:      '#0b88e8'
+                        color:      '#c699ff'
                     }
                 ]
             };
