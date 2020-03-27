@@ -1,15 +1,13 @@
 <template>
     <div id="app">
-        <hero-bubbles>
-            hello bubbles
-        </hero-bubbles>
+        <hero-area></hero-area>
     </div>
 </template>
 
 <script>
-    import HeroBubbles from './components/layout/HeroBubbles';
+    import HeroArea from './components/HeroArea';
     export default {
-        name:       'app',
-        components: { HeroBubbles }
+        name: 'app',
+        components: { HeroArea },
     };
 </script>

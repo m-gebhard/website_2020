@@ -7,11 +7,12 @@
 @import './settings/reset';
 @import './settings/fonts';
 // Components
-@import './components/hero-bubbles';
+@import './components/hero-area';
 // Animations
 @import './animations/list';
 @import './animations/slide';
 @import './animations/appear';
+@import './animations/bounce';
 @import './animations/pop-up';
 
 *, *:before, *.after {
@@ -26,8 +27,6 @@ body {
 #app {
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 
     overflow: hidden;

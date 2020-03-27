@@ -1,0 +1,75 @@
+.hero-area {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    text-align: center;
+    color: $color-white;
+    background: linear-gradient(50deg, lighten($color-primary, 15%), lighten($color-primary, 25%), $color-accent);
+}
+
+.hero-area__icon {
+    @include spacing(margin, s, top bottom);
+    @include text(h2);
+}
+
+.hero-area__divider {
+    @include spacing(margin, m, bottom);
+
+    width: 100px;
+    height: 2px;
+    background: $color-white;
+}
+
+.hero-area__title {
+    @include text(h1);
+    font-weight: 100;
+}
+
+.hero-area__anchor-list {
+    @include spacing(margin, s, top);
+    @include text(h3);
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    color: darken($color-white, 5%);
+}
+
+.hero-area__anchor-list-item {
+    @include spacing(padding, xs, left right bottom);
+
+    cursor: pointer;
+
+    &:after {
+        @include spacing(margin, xs, left right);
+        content: '|';
+    }
+    &:last-of-type:after {
+        display: none;
+    }
+}
+
+.hero-area__jump-caret {
+    @include text(h2);
+
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+
+    opacity: 0.75;
+    color: $color-white;
+    transform: translateX(-50%);
+    animation: 2s bounce infinite;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
