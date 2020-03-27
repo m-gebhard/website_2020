@@ -1,9 +1,12 @@
 <template>
     <div class="page-section" :id="getId" :class="classes">
         <div class="page-section__content">
-            <h2 v-if="title" class="page-section__content-title">
+            <h2 v-if="!$slots.title && title" class="page-section__content-title">
                 {{ title }}
             </h2>
+            <template v-else-if="$slots.title">
+                <slot name="title"></slot>
+            </template>
             <slot></slot>
         </div>
     </div>
@@ -13,10 +16,7 @@
     export default {
         name:     'page-section',
         props:    {
-            title: {
-                required: true,
-                type:     String,
-            },
+            title: {},
             dark:  {
                 default: false,
             },

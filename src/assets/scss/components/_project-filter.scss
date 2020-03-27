@@ -1,0 +1,32 @@
+.project-filter {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.project-filter__wrapper {
+    @include spacing(margin, s, top);
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: auto;
+
+    svg {
+        @include spacing(margin, s, right);
+        @include text(p2);
+
+        color: $color-primary;
+    }
+}
+
+.project-filter__select {
+    @include spacing(padding, xs);
+    @include spacing(padding, s, left right);
+    @include text(p3);
+
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    background: darken($color-background-dark, 5%);
+}

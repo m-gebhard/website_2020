@@ -1,14 +1,5 @@
 <template>
     <div class="project-view">
-        <div class="project-view__filter">
-            <font-awesome-icon icon="th-list"></font-awesome-icon>
-            <select v-model="selectedFilter" class="project-view__filter-select" id="filter">
-                <option v-for="(tag, i) in getAvailableTags"
-                        :value="i">
-                    {{ tag }}
-                </option>
-            </select>
-        </div>
         <transition-group tag="ul" name="list" class="project-view__list">
             <li v-for="(project, i) in getFilteredProjects"
                 :key="`project-view-item-#${i}`"
@@ -27,13 +18,12 @@
 </template>
 
 <script>
-    import AVAILABLE_TAGS from '../utils/availableTags';
+    import { mapGetters } from 'vuex';
 
     export default {
         name:     'project-view',
         data() {
             return {
-                selectedFilter: 0,
                 projects:       [
                     {
                         title:       'X-Lights',
@@ -67,11 +57,10 @@
             };
         },
         computed: {
-            getAvailableTags() {
-                return AVAILABLE_TAGS;
-            },
+            ...mapGetters(['getSelectedFilter']),
+
             getFilteredProjects() {
-                const parsed = parseInt(this.selectedFilter);
+                const parsed = parseInt(this.getSelectedFilter);
 
                 if (parsed === 0) return this.projects;
                 return this.projects.filter((_project) => _project.tags.indexOf(parsed) !== -1);

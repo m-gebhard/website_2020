@@ -11,6 +11,25 @@
             </page-section>
 
             <page-section title="Projects" dark="true" edge="true">
+                <template slot="title">
+                    <div class="project-filter">
+                        <h2 class="page-section__content-title">
+                            Projects
+                        </h2>
+                        <div class="project-filter__wrapper">
+                            <font-awesome-icon icon="th-list"></font-awesome-icon>
+                            <select v-model="selectedFilter"
+                                    class="project-filter__select"
+                                    id="filter"
+                                    @change="updateFilter">
+                                <option v-for="(tag, i) in getAvailableTags"
+                                        :value="i">
+                                    {{ tag }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </template>
                 <project-view></project-view>
             </page-section>
 
@@ -24,13 +43,15 @@
 </template>
 
 <script>
-    import HeroArea     from './components/HeroArea';
-    import PageSection  from './components/PageSection';
-    import ProjectView  from './components/ProjectView';
-    import ContactBox   from './components/ContactBox';
-    import CustomFooter from './components/CustomFooter';
-    import Profile      from './components/Profile';
-    import ScrollTop    from './components/ScrollTop';
+    import { mapActions } from 'vuex';
+    import AVAILABLE_TAGS from './utils/availableTags';
+    import HeroArea       from './components/HeroArea';
+    import PageSection    from './components/PageSection';
+    import ProjectView    from './components/ProjectView';
+    import ContactBox     from './components/ContactBox';
+    import CustomFooter   from './components/CustomFooter';
+    import Profile        from './components/Profile';
+    import ScrollTop      from './components/ScrollTop';
 
     export default {
         name:       'app',
@@ -43,5 +64,22 @@
             PageSection,
             HeroArea,
         },
+        data() {
+            return {
+                selectedFilter: 0,
+            };
+        },
+        computed:   {
+            getAvailableTags() {
+                return AVAILABLE_TAGS;
+            },
+        },
+        methods:    {
+            ...mapActions(['setSelectedFilter']),
+
+            updateFilter() {
+                this.setSelectedFilter(this.selectedFilter);
+            },
+        }
     };
 </script>
