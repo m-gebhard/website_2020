@@ -17,6 +17,17 @@
     background: linear-gradient(50deg, lighten($color-primary, 15%), lighten($color-primary, 25%), $color-accent);
 }
 
+.hero-area__info {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    svg {
+        @include spacing(margin, xs, left right);
+        opacity: 0.75;
+    }
+}
+
 .hero-area__icon {
     @include spacing(margin, s, top bottom);
     @include text(h2);

@@ -18,6 +18,11 @@
                 Graphics
             </li>
         </ul>
+        <div class="hero-area__info">
+            <font-awesome-icon icon="tools"></font-awesome-icon>
+            This website is under Construction
+            <font-awesome-icon icon="tools"></font-awesome-icon>
+        </div>
         <a href="#" class="hero-area__jump-caret">
             <font-awesome-icon icon="caret-down"></font-awesome-icon>
         </a>
