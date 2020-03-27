@@ -1,9 +1,9 @@
 <template>
     <div class="page-section" :class="classes">
-        <h2 class="page-section__title">
-            {{ title }}
-        </h2>
         <div class="page-section__content">
+            <h2 class="page-section__content-title">
+                {{ title }}
+            </h2>
             <slot></slot>
         </div>
     </div>

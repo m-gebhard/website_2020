@@ -1,6 +1,6 @@
 .page-section {
-    @include spacing(padding, l);
-
+    display: flex;
+    justify-content: center;
     width: 100%;
     min-height: 50vh;
     text-align: center;
@@ -9,6 +9,14 @@
     @include bp(m) {
         text-align: left;
     }
+}
+
+.page-section__content {
+    @include spacing(padding, l);
+
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
 
     @include bp(l) {
         max-width: 80vw;
@@ -19,7 +27,7 @@
     }
 }
 
-.page-section__title {
+.page-section__content-title {
     @include spacing(margin, l, top);
 }
 
