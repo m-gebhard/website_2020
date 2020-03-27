@@ -1,0 +1,61 @@
+.project-view__list {
+    display: flex;
+    flex-flow: column wrap;
+
+    @include bp(m) {
+        flex-flow: row wrap;
+    }
+}
+
+.project-view__list-item {
+    @include spacing(padding, s);
+    @include spacing(margin, xs);
+
+    position: relative;
+    flex: 1 0 auto;
+
+    cursor: pointer;
+    user-select: none;
+    background: darken($color-background, 3%);
+    border-radius: $border-radius-default;
+
+    //&:after {
+    //    position: absolute;
+    //    left: 0;
+    //    bottom: 0;
+    //
+    //    content: '';
+    //    display: block;
+    //    width: 100%;
+    //    height: 1px;
+    //    opacity: 0.5;
+    //    background: $color-accent;
+    //}
+
+    @include bp(m) {
+        flex: 1 0 33%;
+    }
+
+    @include bp(xl) {
+        flex: 1 0 25%;
+    }
+}
+
+.project-view__list-item-date {
+    @include spacing(margin, s, top);
+    @include text(p3);
+
+    opacity: 0.75;
+    color: $color-font-dark;
+    text-transform: uppercase;
+}
+
+.project-view__list-item-image {
+    @include spacing(margin, s, top);
+
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

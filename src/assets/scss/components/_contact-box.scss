@@ -1,0 +1,151 @@
+.contact-box {
+    display: flex;
+    flex-flow: column wrap;
+
+    @include bp(l) {
+        flex-flow: row wrap;
+    }
+}
+
+.contact-box__form {
+    @include spacing(margin, l, top);
+
+    order: 2;
+    flex: 3;
+    text-align: left;
+
+    @include bp(m) {
+        margin-top: 0;
+    }
+    @include bp(l) {
+        order: 1;
+    }
+}
+
+.contact-box__form-submit {
+    @include spacing(padding, l, left right);
+    @include spacing(padding, s, top bottom);
+    @include spacing(margin, m, top);
+
+    width: 100%;
+    cursor: pointer;
+    color: $color-white;
+    background: $color-accent;
+    border-radius: $border-radius-default;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    transition: background $transition-regular;
+
+    @include bp(m) {
+        width: auto;
+        margin-top: 0;
+
+        &:hover {
+            background: darken($color-accent, 10%);
+        }
+    }
+}
+
+.contact-box__row {
+    @include spacing(margin, s, bottom);
+
+    display: flex;
+    flex-flow: column wrap;
+
+    @include bp(m) {
+        flex-flow: row wrap;
+    }
+}
+
+.contact-box__input {
+    @include spacing(margin, s, left right);
+
+    flex: 1;
+
+    label {
+        @include text(p2);
+
+        color: $color-font-light;
+    }
+
+    input, textarea {
+        @include spacing(margin, xs, top);
+        @include text(p3);
+
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: $border-radius-default;
+        background: darken($color-background-dark, 2%);
+    }
+
+    textarea {
+        min-height: 200px;
+    }
+}
+
+.contact-box__details {
+    @include spacing(padding, s);
+
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    order: 1;
+    flex: 1;
+
+    &:after {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+
+        content: '';
+        display: block;
+        width: 50%;
+        height: 1px;
+        opacity: 0.5;
+        background: $color-accent;
+        transform: translateX(-50%);
+    }
+
+    h3 {
+        @include spacing(padding, s, bottom);
+    }
+
+    @include bp(l) {
+        order: 2;
+
+        &:after {
+            left: 0;
+            width: 1px;
+            height: 100%;
+            transform: none;
+        }
+    }
+}
+
+.contact-box__details-item {
+    @include spacing(margin, m, top);
+    @include text(p2);
+
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+
+    svg {
+        color: lighten($color-font-light, 20%);
+    }
+
+    span, a {
+        @include spacing(margin, s, right);
+        text-decoration: none;
+        color: $color-primary;
+
+        span {
+            color: lighten($color-font-light, 25%);
+        }
+    }
+}

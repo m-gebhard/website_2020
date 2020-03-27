@@ -1,8 +1,8 @@
 $color-primary: #0b88e8;
 $color-accent: #aa66ff;
 $color-secondary: #ff3200;
-$color-background: #ddd;
-$color-background-dark: #c9c9c9;
+$color-background: #fff;
+$color-background-dark: #f6f6f6;
 $color-font-light: #222;
 $color-font-dark: #232323;
 $color-black: #000;
@@ -14,7 +14,7 @@ $transition-long: 0.5s;
 $transition-regular: 0.35s;
 $transition-fast: 0.25s;
 
-$border-radius-default: 5px;
+$border-radius-default: 3px;
 $box-shadow-bottom: 0px 3px 6px -4px rgba(0, 0, 0, 0.55);
 
 $breakpoints: (
@@ -30,7 +30,7 @@ $spacings: (
     nxs: 16px 14px 10px 8px 8px,
     s: 14px 14px 16px 18px 20px,
     m: 20px 20px 22px 24px 28px,
-    l: 25px 25px 30px 30px 35px,
+    l: 30px 30px 35px 35px 40px,
     xl: 20px 40px 75px 140px 260px
 );
 
@@ -43,7 +43,7 @@ $fonts: (
     ),
     h2: (
         size: 26.00px 26.00px 28.00px 28.00px 30.00px,
-        height: 60.00px 66.00px 68.00px 72.00px 80.00px,
+        height: 34.00px 34.00px 38.00px 38.00px 42.00px,
         family: $font-default,
         letterspacing: 0.01em,
     ),

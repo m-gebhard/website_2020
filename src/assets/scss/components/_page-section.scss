@@ -1,0 +1,15 @@
+.page-section {
+    @include spacing(padding, xl, left right);
+    @include spacing(padding, l, top bottom);
+
+    min-height: 50vh;
+    text-align: center;
+
+    @include bp(m) {
+        text-align: left;
+    }
+}
+
+.page-section__title {
+    @include spacing(margin, l, top);
+}

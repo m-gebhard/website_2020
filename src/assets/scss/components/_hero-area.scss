@@ -1,4 +1,6 @@
 .hero-area {
+    @include spacing(padding, xl, left right);
+
     position: relative;
     display: flex;
     flex-flow: column wrap;
@@ -10,6 +12,7 @@
 
     text-align: center;
     color: $color-white;
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 96%, 0 100%, 0 0);
     background: linear-gradient(50deg, lighten($color-primary, 15%), lighten($color-primary, 25%), $color-accent);
 }
 
@@ -26,48 +29,50 @@
     background: $color-white;
 }
 
-.hero-area__title {
-    @include text(h1);
-    font-weight: 100;
-}
-
 .hero-area__anchor-list {
     @include spacing(margin, s, top);
     @include text(h3);
 
     display: flex;
     flex-flow: row nowrap;
-
-    color: darken($color-white, 5%);
 }
 
 .hero-area__anchor-list-item {
     @include spacing(padding, xs, left right bottom);
 
     cursor: pointer;
+    color: darken($color-white, 5%);
+    transition: color $transition-regular, opacity $transition-regular;
 
     &:after {
         @include spacing(margin, xs, left right);
         content: '|';
     }
+
     &:last-of-type:after {
         display: none;
+    }
+
+    @include bp(m) {
+        &:hover {
+            opacity: 0.6;
+            color: $color-white;
+        }
     }
 }
 
 .hero-area__jump-caret {
+    @include spacing(padding, s);
     @include text(h2);
 
     position: absolute;
-    bottom: 50px;
-    left: 50%;
-    width: 50px;
-    height: 50px;
+    bottom: 60px;
 
     opacity: 0.75;
     color: $color-white;
     transform: translateX(-50%);
     animation: 2s bounce infinite;
+    line-height: 20px !important;
 
     &:hover {
         animation-play-state: paused;

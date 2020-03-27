@@ -6,8 +6,12 @@
 @import './settings/variables';
 @import './settings/reset';
 @import './settings/fonts';
+@import './settings/general';
 // Components
 @import './components/hero-area';
+@import './components/contact-box';
+@import './components/project-view';
+@import './components/page-section';
 // Animations
 @import './animations/list';
 @import './animations/slide';
@@ -25,7 +29,9 @@ body {
 }
 
 #app {
-    height: 100vh;
+    @include text(p2);
+
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 

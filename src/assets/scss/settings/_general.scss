@@ -1,0 +1,43 @@
+h1 {
+    @include text(h1);
+    font-weight: 100;
+}
+
+h2 {
+    @include spacing(margin, l, bottom);
+    @include text(h2);
+
+    position: relative;
+    text-align: center;
+
+    &:after {
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+
+        content: '';
+        display: block;
+        width: 70px;
+        height: 2px;
+        transform: translateX(-50%);
+        background: linear-gradient(50deg, lighten($color-primary, 15%), $color-accent);
+
+        @include bp(m) {
+            width: 100px;
+        }
+    }
+
+    @include bp(m) {
+        text-align: left;
+
+        &:after {
+            left: 0;
+            bottom: -10px;
+            transform: none;
+        }
+    }
+}
+
+h3 {
+    @include text(h3);
+}
