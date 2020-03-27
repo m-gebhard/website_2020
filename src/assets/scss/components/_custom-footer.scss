@@ -64,3 +64,26 @@
         }
     }
 }
+
+.custom-footer__copyright {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+
+    @include bp(m) {
+        text-align: left;
+    }
+}
+
+.custom-footer__copyright-heart {
+    @include spacing(margin, xs, bottom);
+
+    svg {
+        margin-left: 2px;
+        color: $color-accent;
+
+        &:last-of-type {
+            color: $color-primary;
+        }
+    }
+}
