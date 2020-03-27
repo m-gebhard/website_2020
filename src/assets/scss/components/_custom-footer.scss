@@ -10,7 +10,7 @@
 }
 
 .custom-footer__content {
-    @include spacing(padding, s, top bottom);
+    @include spacing(padding, m, top bottom);
     @include spacing(padding, l, left right);
 
     display: flex;
