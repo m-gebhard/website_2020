@@ -1,7 +1,7 @@
 <template>
     <div class="page-section" :class="classes">
         <div class="page-section__content">
-            <h2 class="page-section__content-title">
+            <h2 v-if="title" class="page-section__content-title">
                 {{ title }}
             </h2>
             <slot></slot>
@@ -19,12 +19,16 @@
             },
             dark:  {
                 default: false,
+            },
+            edge:  {
+                default: false,
             }
         },
         computed: {
             classes() {
                 return {
                     ['page-section--grey']: this.dark,
+                    ['page-section--edge']: this.edge,
                 };
             }
         },

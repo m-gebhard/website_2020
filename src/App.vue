@@ -6,7 +6,7 @@
             My Name is Marius Gebhard
         </page-section>
 
-        <page-section dark="true" title="Projects">
+        <page-section title="Projects" dark="true" edge="true">
             <project-view></project-view>
         </page-section>
 
