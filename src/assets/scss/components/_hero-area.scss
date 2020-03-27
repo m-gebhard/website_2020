@@ -58,7 +58,7 @@
 
     @include bp(m) {
         &:hover {
-            color: rgba($color-secondary, 0.75);
+            color: $color-accent
         }
     }
 }

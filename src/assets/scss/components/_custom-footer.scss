@@ -60,7 +60,7 @@
 
     @include bp(m) {
         &:hover a svg {
-            color: rgba($color-secondary, 0.5);
+            color: rgba($color-accent, 0.75);
         }
     }
 }
