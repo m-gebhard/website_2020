@@ -2,7 +2,7 @@
     <div class="profile">
         <ul class="profile__wrapper">
             <li class="profile__item">
-                <font-awesome-icon icon="running"></font-awesome-icon>
+                <font-awesome-icon icon="user"></font-awesome-icon>
                 <h3>Who am I?</h3>
                 <p class="profile__item-description">
                     My Name is Marius Gebhard.<br>

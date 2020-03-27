@@ -37,7 +37,7 @@
                 <font-awesome-icon icon="compass"></font-awesome-icon>
             </div>
             <div class="contact-box__details-item">
-                <a href="mailto:">marius.wspi@gmail.com</a>
+                <a href="mailto:marius.wspi@gmail.com">marius.wspi@gmail.com</a>
                 <font-awesome-icon icon="at"></font-awesome-icon>
             </div>
         </div>
