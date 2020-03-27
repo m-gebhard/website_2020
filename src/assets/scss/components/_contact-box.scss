@@ -81,6 +81,7 @@
 
     textarea {
         min-height: 200px;
+        resize: vertical;
     }
 
     @include bp(m) {

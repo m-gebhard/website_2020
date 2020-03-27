@@ -6,6 +6,7 @@
     max-width: 1200px;
     min-height: 50vh;
     text-align: center;
+    border-radius: $border-radius-default;
 
     @include bp(m) {
         text-align: left;
@@ -14,4 +15,8 @@
 
 .page-section__title {
     @include spacing(margin, l, top);
+}
+
+.page-section--grey {
+    background: $color-background-dark;
 }

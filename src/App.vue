@@ -4,7 +4,7 @@
         <page-section title="About Me">
             My Name is Marius Gebhard
         </page-section>
-        <page-section title="Projects">
+        <page-section dark="true" title="Projects">
             <project-view></project-view>
         </page-section>
         <page-section title="Contact">
