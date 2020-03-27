@@ -48,8 +48,6 @@
 }
 
 .contact-box__row {
-    @include spacing(margin, s, bottom);
-
     display: flex;
     flex-flow: column wrap;
 
@@ -59,7 +57,7 @@
 }
 
 .contact-box__input {
-    @include spacing(margin, s, left right);
+    @include spacing(margin, s, bottom);
 
     flex: 1;
 
@@ -83,6 +81,10 @@
 
     textarea {
         min-height: 200px;
+    }
+
+    @include bp(m) {
+        margin-right: 20px;
     }
 }
 

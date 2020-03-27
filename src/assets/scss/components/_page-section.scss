@@ -1,7 +1,9 @@
 .page-section {
-    @include spacing(padding, xl, left right);
     @include spacing(padding, l, top bottom);
+    @include spacing(padding, l, left right);
 
+    width: 100%;
+    max-width: 1200px;
     min-height: 50vh;
     text-align: center;
 
