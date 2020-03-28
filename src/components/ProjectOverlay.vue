@@ -112,7 +112,6 @@
                     this.$nextTick(() => {
                         this.swiper = new Swiper('.project-overlay__content-slider-container', {
                             preloadImages:            true,
-                            centerInsufficientSlides: true,
                             slidesPerView:            1,
                             spaceBetween:             10,
                             breakpoints:              {
