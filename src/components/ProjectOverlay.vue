@@ -1,5 +1,6 @@
 <template>
-    <div v-if="isOpen" class="project-overlay">
+    <div v-if="project" class="project-overlay" :class="classes">
+        <div class="project-overlay__background"></div>
         <div class="project-overlay__content">
             <div class="project-overlay__content-scroll-container">
                 <div class="project-overlay__content-close"
@@ -78,8 +79,10 @@
         computed: {
             ...mapGetters(['getModalOpenState', 'getModal']),
 
-            modal() {
-                return this.getModal('project-modal');
+            classes() {
+                return {
+                    ['project-overlay--open']: this.isOpen,
+                };
             },
             isOpen() {
                 return this.getModalOpenState('project-modal');
@@ -92,7 +95,7 @@
             ...mapActions(['setModalOpenState']),
 
             init() {
-                this.project = this.modal.payload;
+                this.project = this.getModal('project-modal').payload;
             },
             close() {
                 this.setModalOpenState({

@@ -5,16 +5,45 @@
     width: 100vw;
     height: 100vh;
 
+    opacity: 0;
+    pointer-events: none;
+    background: $color-white;
+    transition: opacity $transition-regular;
+}
+
+.project-overlay__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+    opacity: 0;
+    transition: opacity $transition-regular;
     background: linear-gradient(50deg, lighten($color-primary, 15%), lighten($color-primary, 25%), $color-accent);
 }
 
+.project-overlay--open {
+    opacity: 1;
+    pointer-events: auto;
+
+    .project-overlay__background {
+        animation: fadeIn $transition-regular;
+        animation-delay: $transition-long;
+        animation-fill-mode: forwards;
+    }
+}
+
 .project-overlay__content {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     width: 100%;
     height: 100%;
 
+    z-index: 1;
     overflow: auto;
     background: linear-gradient(to top, $color-background-dark, $color-background);
     clip-path: polygon(0 0, 50% 4%, 100% 0, 100% 50%, 100% 100%, 50% 96%, 0 100%, 0 50%);
@@ -161,5 +190,14 @@
         &:hover {
             color: darken($color-accent, 20%);
         }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

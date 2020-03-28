@@ -38,9 +38,7 @@
             </page-section>
         </div>
 
-        <transition name="appear">
-            <project-overlay></project-overlay>
-        </transition>
+        <project-overlay></project-overlay>
 
         <custom-footer></custom-footer>
     </main>
