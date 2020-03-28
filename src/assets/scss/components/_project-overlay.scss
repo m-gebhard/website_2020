@@ -70,6 +70,15 @@
     }
 }
 
+.project-overlay__content-slider-container--disabled {
+    .swiper-wrapper {
+        transform: translate3d(0, 0, 0) !important;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+}
+
 .project-overlay__content-description {
     @include text(p2);
 

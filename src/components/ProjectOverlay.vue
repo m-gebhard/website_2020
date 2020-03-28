@@ -49,7 +49,8 @@
                 </social-sharing>
 
                 <div v-if="getImages.length > 0"
-                     class="project-overlay__content-slider-container">
+                     class="project-overlay__content-slider-container"
+                     :class="{'project-overlay__content-slider-container--disabled' : getImages.length < 2}">
                     <div class="swiper-wrapper">
                         <div v-for="(image, i) in getImages"
                              :key="`project-overlay-image-#${i}`"
