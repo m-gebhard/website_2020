@@ -78,6 +78,7 @@
                             preloadImages:            true,
                             centerInsufficientSlides: true,
                             slidesPerView:            1,
+                            spaceBetween:             10,
                             breakpoints:              {
                                 701:  {
                                     slidesPerView: 2,
@@ -86,9 +87,8 @@
                                     slidesPerView: 3,
                                 }
                             },
-                            pagination: {
+                            pagination:               {
                                 el: '.swiper-pagination',
-                                type: 'progressbar',
                             },
                         });
                     });
