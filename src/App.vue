@@ -45,16 +45,16 @@
 </template>
 
 <script>
-    import { mapActions } from 'vuex';
-    import AVAILABLE_TAGS from './utils/availableTags';
-    import HeroArea       from './components/HeroArea';
-    import PageSection    from './components/PageSection';
-    import ProjectView    from './components/ProjectView';
-    import ContactBox     from './components/ContactBox';
-    import CustomFooter   from './components/CustomFooter';
-    import Profile        from './components/Profile';
-    import ScrollTop      from './components/ScrollTop';
-    import ProjectOverlay from './components/ProjectOverlay';
+    import { mapActions, mapGetters } from 'vuex';
+    import AVAILABLE_TAGS             from './utils/availableTags';
+    import HeroArea                   from './components/HeroArea';
+    import PageSection                from './components/PageSection';
+    import ProjectView                from './components/ProjectView';
+    import ContactBox                 from './components/ContactBox';
+    import CustomFooter               from './components/CustomFooter';
+    import Profile                    from './components/Profile';
+    import ScrollTop                  from './components/ScrollTop';
+    import ProjectOverlay             from './components/ProjectOverlay';
 
     export default {
         name:       'app',
@@ -74,6 +74,8 @@
             };
         },
         computed:   {
+            ...mapGetters(['isAnyModalOpened']),
+
             getAvailableTags() {
                 return AVAILABLE_TAGS;
             },
@@ -84,6 +86,15 @@
             updateFilter() {
                 this.setSelectedFilter(this.selectedFilter);
             },
-        }
+        },
+        watch:      {
+            isAnyModalOpened(state) {
+                if (state) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = 'auto';
+                }
+            },
+        },
     };
 </script>
