@@ -49,6 +49,43 @@
     }
 }
 
+.project-overlay__content-share-buttons {
+    @include spacing(margin, m, top);
+
+    display: flex;
+    flex-flow: column wrap;
+    color: $color-primary;
+
+    .project-overlay__content-share-buttons-title {
+        @include spacing(margin, s, top bottom);
+        @include text(p3);
+
+        text-align: center;
+    }
+
+    .project-overlay__content-share-buttons-list {
+        display: flex;
+        justify-content: center;
+        span:not(.project-overlay__content-share-buttons-title) {
+            @include text(p1);
+
+            cursor: pointer;
+
+            &:after {
+                @include spacing(margin, xs, left right);
+
+                content: '|';
+                opacity: 0.5;
+                color: darken($color-white, 20%);
+            }
+
+            &:last-of-type:after {
+                display: none;
+            }
+        }
+    }
+}
+
 .project-overlay__content-slider-container {
     @include spacing(padding, m, left right top);
     @include spacing(padding, l, bottom);

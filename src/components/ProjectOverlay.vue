@@ -14,6 +14,39 @@
                     {{ project.description }}
                 </p>
 
+                <social-sharing url="https://mgebhard.tk"
+                                title="Check out this project!"
+                                :description="project.description"
+                                :quote="project.title"
+                                hashtags="developer,web,javascript,framework,fancy,vuejs,css,html"
+                                inline-template>
+
+                    <div class="project-overlay__content-share-buttons">
+                        <span class="project-overlay__content-share-buttons-title">Share this Project</span>
+
+                        <div class="project-overlay__content-share-buttons-list">
+                            <network network="email">
+                                <font-awesome-icon icon="envelope"></font-awesome-icon>
+                            </network>
+                            <network network="facebook">
+                                <font-awesome-icon :icon="['fab', 'facebook']"></font-awesome-icon>
+                            </network>
+                            <network network="twitter">
+                                <font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon>
+                            </network>
+                            <network network="reddit">
+                                <font-awesome-icon :icon="['fab', 'reddit']"></font-awesome-icon>
+                            </network>
+                            <network network="telegram">
+                                <font-awesome-icon :icon="['fab', 'telegram']"></font-awesome-icon>
+                            </network>
+                            <network network="whatsapp">
+                                <font-awesome-icon :icon="['fab', 'whatsapp']"></font-awesome-icon>
+                            </network>
+                        </div>
+                    </div>
+                </social-sharing>
+
                 <div v-if="getImages.length > 0"
                      class="project-overlay__content-slider-container">
                     <div class="swiper-wrapper">

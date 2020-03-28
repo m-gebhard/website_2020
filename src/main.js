@@ -1,8 +1,9 @@
 // 3rd
-import Vue       from 'vue';
-import App       from './App.vue';
-import store     from './store';
-import Scrollspy from 'vue2-scrollspy';
+import Vue          from 'vue';
+import App          from './App.vue';
+import store        from './store';
+import Scrollspy    from 'vue2-scrollspy';
+import SocialShaing from 'vue-social-sharing';
 
 // scss
 import './assets/scss/app.scss';
@@ -20,6 +21,7 @@ library.add(fas, fab);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.use(Scrollspy);
+Vue.use(SocialSharing);
 
 Vue.config.productionTip = false;
 
