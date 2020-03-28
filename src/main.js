@@ -1,9 +1,12 @@
+// 3rd
 import Vue       from 'vue';
 import App       from './App.vue';
 import store     from './store';
 import Scrollspy from 'vue2-scrollspy';
 
+// scss
 import './assets/scss/app.scss';
+import 'swiper/css/swiper.min.css';
 
 // font awesome
 import { library }         from '@fortawesome/fontawesome-svg-core';
