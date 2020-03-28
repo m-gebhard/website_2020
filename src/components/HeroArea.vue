@@ -5,7 +5,7 @@
         </font-awesome-icon>
         <div class="hero-area__divider"></div>
         <h1 class="hero-area__title">
-            Marius Gebhard
+            marius gebhard
         </h1>
         <ul class="hero-area__anchor-list">
             <li class="hero-area__anchor-list-item">
