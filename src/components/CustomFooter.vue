@@ -12,17 +12,17 @@
             </div>
             <ul class="custom-footer__anchor-list">
                 <li class="custom-footer__anchor-list-item">
-                    <a href="#">
+                    <a href="https://codepen.io/marius12375" target="_blank">
                         <font-awesome-icon :icon="['fab', 'codepen']"></font-awesome-icon>
                     </a>
                 </li>
                 <li class="custom-footer__anchor-list-item">
-                    <a href="#">
+                    <a href="https://github.com/marius12375" target="_blank">
                         <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
                     </a>
                 </li>
                 <li class="custom-footer__anchor-list-item">
-                    <a href="#">
+                    <a href="https://www.youtube.com/user/SensitionBeatZ" target="_blank">
                         <font-awesome-icon :icon="['fab', 'youtube']"></font-awesome-icon>
                     </a>
                 </li>
