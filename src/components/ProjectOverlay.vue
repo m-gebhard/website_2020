@@ -14,13 +14,16 @@
                     {{ project.description }}
                 </p>
 
-                <div v-if="project.images.length > 0" class="project-overlay__content-slider-container">
+                <div v-if="getImages.length > 0"
+                     class="project-overlay__content-slider-container">
                     <div class="swiper-wrapper">
-                        <div v-for="image in project.images"
+                        <div v-for="(image, i) in getImages"
+                             :key="`project-overlay-image-#${i}`"
                              :style="{backgroundImage: `url(${image})`}"
                              class="swiper-slide">
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -36,22 +39,8 @@
         data() {
             return {
                 project: null,
+                swiper:  null,
             };
-        },
-        mounted() {
-            const swiper = new Swiper('.project-overlay__content-slider-container', {
-                loop:          true,
-                preloadImages: true,
-                slidesPerView: 2,
-                breakpoints:   {
-                    701:  {
-                        slidesPerView: 3,
-                    },
-                    1301: {
-                        slidesPerView: 4,
-                    }
-                },
-            });
         },
         computed: {
             ...mapGetters(['getModalOpenState', 'getModal']),
@@ -62,6 +51,9 @@
             isOpen() {
                 return this.getModalOpenState('project-modal');
             },
+            getImages() {
+                return this.project.images;
+            }
         },
         methods:  {
             ...mapActions(['setModalOpenState']),
@@ -80,6 +72,26 @@
             isOpen(open) {
                 if (open) {
                     this.init();
+
+                    this.$nextTick(() => {
+                        this.swiper = new Swiper('.project-overlay__content-slider-container', {
+                            preloadImages:            true,
+                            centerInsufficientSlides: true,
+                            slidesPerView:            1,
+                            breakpoints:              {
+                                701:  {
+                                    slidesPerView: 2,
+                                },
+                                1301: {
+                                    slidesPerView: 3,
+                                }
+                            },
+                            pagination: {
+                                el: '.swiper-pagination',
+                                type: 'progressbar',
+                            },
+                        });
+                    });
                 }
             },
         },
