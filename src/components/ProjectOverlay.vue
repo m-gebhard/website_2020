@@ -33,12 +33,6 @@
                             <network network="twitter">
                                 <font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon>
                             </network>
-                            <network network="reddit">
-                                <font-awesome-icon :icon="['fab', 'reddit']"></font-awesome-icon>
-                            </network>
-                            <network network="telegram">
-                                <font-awesome-icon :icon="['fab', 'telegram']"></font-awesome-icon>
-                            </network>
                             <network network="whatsapp">
                                 <font-awesome-icon :icon="['fab', 'whatsapp']"></font-awesome-icon>
                             </network>
@@ -114,10 +108,10 @@
 
                     this.$nextTick(() => {
                         this.swiper = new Swiper('.project-overlay__content-slider-container', {
-                            preloadImages:            true,
-                            slidesPerView:            1,
-                            spaceBetween:             10,
-                            breakpoints:              {
+                            preloadImages: true,
+                            slidesPerView: 1,
+                            spaceBetween:  10,
+                            breakpoints:   {
                                 701:  {
                                     slidesPerView: 2,
                                 },
@@ -125,7 +119,7 @@
                                     slidesPerView: 3,
                                 }
                             },
-                            pagination:               {
+                            pagination:    {
                                 el: '.swiper-pagination',
                             },
                         });

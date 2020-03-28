@@ -103,7 +103,6 @@
 
     .project-overlay__content-share-buttons-title {
         @include spacing(margin, s, top bottom);
-        @include text(p3);
 
         text-align: center;
     }
@@ -111,10 +110,19 @@
     .project-overlay__content-share-buttons-list {
         display: flex;
         justify-content: center;
+        opacity: 0.75;
+
         span:not(.project-overlay__content-share-buttons-title) {
-            @include text(p1);
+            @include text(h2);
 
             cursor: pointer;
+            transition: color $transition-fast;
+
+            @include bp(m) {
+                &:hover {
+                    color: darken($color-primary, 20%);
+                }
+            }
 
             &:after {
                 @include spacing(margin, xs, left right);

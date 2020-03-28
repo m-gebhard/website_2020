@@ -41,7 +41,7 @@
                         category:    'Android Game [C#]',
                         tags:        [4],
                         images:      ['Spaceship.jpg'],
-                        description: "Spacepilot is a game for android smartphones.<br>It's made with <a href='http://www.monogame.net/' target='_blank'>Monogame</a> for C#.<br>You play as an pilot of a spaceship, and your objective is to destroy enemy fighters.<br>Really simple, but high addictive ;)<br> Can you be the hero who saves the world from these evil guys?<br><br>The project will be uploaded to my <a href='https://github.com/marius12375' target='_blank'>GitHub</a> account soon, stay tuned!",
+                        description: "Spacepilot is a game for android smartphones.<br>It's made with <a href='http://www.monogame.net/' target='_blank'>Monogame</a> for C#.<br>You play as an pilot of a spaceship, and your objective is to destroy enemy fighters.<br>Really simple, but highly addictive ;)<br> Can you be the hero who saves the world from these evil guys?<br><br>The project will be uploaded to my <a href='https://github.com/marius12375' target='_blank'>GitHub</a> account soon, stay tuned!",
                     },
                     {
                         title:       'Liquicalc',
