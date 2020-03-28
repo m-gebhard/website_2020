@@ -34,8 +34,8 @@
                     <li v-for="(skill, i) in skills"
                         :key="`profile-chart-item-#${i}`"
                         :style="chartItemStyle(skill)"
+                        v-html="skill.name"
                         class="profile__item-chart-item">
-                        {{ skill.name }}
                     </li>
                 </ul>
             </li>
@@ -55,11 +55,7 @@
                         color:      '#c699ff'
                     },
                     {
-                        name:       'HTML',
-                        percentage: 80,
-                        color:      '#abd8fb'
-                    }, {
-                        name:       'CSS',
+                        name:       'HTML<br>CSS',
                         percentage: 90,
                         color:      '#abd8fb'
                     },
@@ -70,7 +66,7 @@
                     },
                     {
                         name:       'Dart',
-                        percentage: 60,
+                        percentage: 55,
                         color:      '#c699ff'
                     },
                     {

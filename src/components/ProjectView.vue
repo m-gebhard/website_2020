@@ -4,14 +4,16 @@
             <li v-for="(project, i) in getFilteredProjects"
                 :key="`project-view-item-#${i}`"
                 class="project-view__list-item">
-                <h3 class="project-view__list-item-title">
-                    {{ project.title }}
-                </h3>
-                <p class="project-view__list-item-date">
-                    {{ project.date }}
-                </p>
-                <div :style="{background: `url(${project.image})`}"
-                     class="project-view__list-item-image"></div>
+                <div class="project-view__list-item-content">
+                    <h3 class="project-view__list-item-title">
+                        {{ project.title }}
+                    </h3>
+                    <p class="project-view__list-item-date">
+                        {{ project.date }}
+                    </p>
+                    <div :style="{background: `url(${project.image})`}"
+                         class="project-view__list-item-image"></div>
+                </div>
             </li>
         </transition-group>
     </div>
