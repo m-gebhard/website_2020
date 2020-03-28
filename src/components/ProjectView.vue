@@ -11,7 +11,8 @@
                     <p class="project-view__list-item-date">
                         {{ project.date }}
                     </p>
-                    <div :style="{background: `url(${project.image})`}"
+                    <div v-if="project.images.length > 0"
+                         :style="{background: `url(${project.images[0]})`}"
                          class="project-view__list-item-image"></div>
                 </div>
             </li>
@@ -26,33 +27,33 @@
         name:     'project-view',
         data() {
             return {
-                projects:       [
+                projects: [
                     {
                         title:       'X-Lights',
                         date:        'Fri. 20th May',
                         tags:        [5, 4, 1, 2, 3],
-                        image:       'https://placeimg.com/640/480/nature',
+                        images:      ['https://placeimg.com/640/480/nature'],
                         description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
                     },
                     {
                         title:       'Spacepilot',
                         date:        'Sun. 22th May',
                         tags:        [4],
-                        image:       'https://placeimg.com/640/480/technology',
+                        images:      ['https://placeimg.com/640/480/technology'],
                         description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
                     },
                     {
                         title:       'Liquicalc',
                         date:        'Fri. 20th May',
                         tags:        [6],
-                        image:       'https://placeimg.com/640/480/technology',
+                        images:      ['https://placeimg.com/640/480/technology'],
                         description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
                     },
                     {
                         title:       'BetterKLM',
                         date:        'Thu. 5th October',
                         tags:        [4],
-                        image:       'https://placeimg.com/640/480/technology',
+                        images:      ['https://placeimg.com/640/480/technology'],
                         description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
                     },
                 ]

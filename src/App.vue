@@ -38,6 +38,10 @@
             </page-section>
         </div>
 
+        <transition name="appear">
+            <project-overlay></project-overlay>
+        </transition>
+
         <custom-footer></custom-footer>
     </main>
 </template>
@@ -52,10 +56,12 @@
     import CustomFooter   from './components/CustomFooter';
     import Profile        from './components/Profile';
     import ScrollTop      from './components/ScrollTop';
+    import ProjectOverlay from './components/ProjectOverlay';
 
     export default {
         name:       'app',
         components: {
+            ProjectOverlay,
             ScrollTop,
             Profile,
             CustomFooter,

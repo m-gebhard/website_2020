@@ -1,0 +1,53 @@
+.project-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(50deg, lighten($color-primary, 15%), lighten($color-primary, 25%), $color-accent);
+}
+
+.project-overlay__content {
+    @include spacing(padding, l);
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba($color-white, 0.75);
+    clip-path: polygon(0 0, 50% 4%, 100% 0, 100% 50%, 100% 100%, 50% 96%, 0 100%, 0 50%);
+}
+
+.project-overlay__content-description {
+    @include text(p2);
+
+    width: 100%;
+    text-align: center;
+
+    @include bp(l) {
+        max-width: 70vw;
+    }
+
+    @include bp(xl) {
+        max-width: 1000px;
+    }
+}
+
+.project-overlay__content-close {
+    @include spacing(padding, s);
+    @include text(h2);
+
+    cursor: pointer;
+    margin-left: auto;
+    color: $color-accent;
+    transition: color $transition-regular;
+
+    @include bp(m) {
+        &:hover {
+            color: darken($color-accent, 20%);
+        }
+    }
+}
