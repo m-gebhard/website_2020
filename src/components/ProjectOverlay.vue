@@ -11,9 +11,7 @@
                 <h2 class="project-overlay__content-title">
                     {{ project.title }}
                 </h2>
-                <p class="project-overlay__content-description">
-                    {{ project.description }}
-                </p>
+                <p class="project-overlay__content-description" v-html="project.description"></p>
 
                 <social-sharing url="https://mgebhard.tk"
                                 title="Check out this project!"
@@ -54,7 +52,7 @@
                     <div class="swiper-wrapper">
                         <div v-for="(image, i) in getImages"
                              :key="`project-overlay-image-#${i}`"
-                             :style="{backgroundImage: `url(${image})`}"
+                             :style="getImageStyle(image)"
                              class="swiper-slide">
                         </div>
                     </div>
@@ -90,7 +88,7 @@
             },
             getImages() {
                 return this.project.images;
-            }
+            },
         },
         methods:  {
             ...mapActions(['setModalOpenState']),
@@ -103,6 +101,10 @@
                     key:       'project-modal',
                     openState: false,
                 });
+            },
+            getImageStyle(image) {
+                const _image = require(`./../assets/images/projects/${image}`);
+                return `background-image: url('${_image}')`;
             },
         },
         watch:    {

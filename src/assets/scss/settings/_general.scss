@@ -51,6 +51,11 @@ h3 {
     }
 }
 
+a {
+    text-decoration: none;
+    color: $color-primary;
+}
+
 hr {
     @include spacing(padding, xs);
 
