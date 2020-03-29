@@ -93,7 +93,9 @@
             isSwiperEnabled() {
                 // Disable swiping if there are not enough images
                 if (!this.swiper) return false;
-                return this.project.images.length > this.getBreakpoints[this.swiper.currentBreakpoint].slidesPerView;
+                const itemCount = this.project.images.length + (this.project.video ? 1 : 0);
+
+                return itemCount > this.getBreakpoints[this.swiper.currentBreakpoint].slidesPerView;
             },
             getImages() {
                 return this.project.images;
@@ -147,19 +149,19 @@
 
                     this.$nextTick(() => {
                         this.swiper = new Swiper('.project-overlay__content-slider-container', {
-                            spaceBetween:  10,
-                            breakpoints:   {
+                            spaceBetween: 10,
+                            breakpoints:  {
                                 0:    {
-                                    slidesPerView: 1,
-                                },
-                                701:  {
                                     slidesPerView: 2,
                                 },
-                                1301: {
+                                421:  {
                                     slidesPerView: 3,
+                                },
+                                1301: {
+                                    slidesPerView: 4,
                                 }
                             },
-                            pagination:    {
+                            pagination:   {
                                 el: '.swiper-pagination',
                             },
                         });

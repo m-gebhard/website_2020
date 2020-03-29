@@ -189,7 +189,7 @@
 }
 
 .project-overlay__content-slider-container {
-    @include spacing(padding, m, left right top);
+    @include spacing(padding, s, left right top);
     @include spacing(padding, l, bottom);
     @include spacing(margin, l, top);
 
@@ -219,7 +219,7 @@
 
     .swiper-slide {
         position: relative;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         border-radius: $border-radius-default;
@@ -233,6 +233,7 @@
             align-items: center;
             justify-content: center;
 
+            text-align: center;
             transition: color $transition-regular;
 
             @include bp(m) {
@@ -263,6 +264,7 @@
                 @include spacing(margin, s, top);
                 @include text(p2);
 
+                width: 80%;
                 z-index: 1;
                 opacity: 0.75;
                 color: $color-white;
