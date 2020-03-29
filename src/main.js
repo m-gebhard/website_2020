@@ -11,11 +11,30 @@ import 'swiper/css/swiper.min.css';
 
 // font awesome
 import { library }         from '@fortawesome/fontawesome-svg-core';
-import { fas }             from '@fortawesome/free-solid-svg-icons';
-import { fab }             from '@fortawesome/free-brands-svg-icons';
+import {
+    faTimes, faEnvelope, faPlayCircle,
+    faUser, faChartBar, faHeart,
+    faCode, faCoffee, faCaretUp,
+    faCompass, faAt, faTools,
+    faThList, faCaretDown,
+}                          from '@fortawesome/free-solid-svg-icons';
+import {
+    faFacebook,
+    faTwitch,
+    faWhatsapp,
+    faCodepen,
+    faGithub,
+    faYoutube,
+    faTwitter,
+}                          from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(fas, fab);
+library.add(faTimes, faEnvelope, faPlayCircle,
+    faUser, faChartBar, faHeart,
+    faCode, faCoffee, faCaretUp,
+    faCompass, faAt, faTools, faCaretDown,
+    faThList, faFacebook, faTwitch, faTwitter,
+    faWhatsapp, faCodepen, faGithub, faYoutube);
 
 // Components
 Vue.component('font-awesome-icon', FontAwesomeIcon);
