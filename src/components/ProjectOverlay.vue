@@ -167,9 +167,11 @@
                         });
                     });
                 } else {
-                    this.swiper.destroy();
-                    this.swiper = null;
-                    document.removeEventListener('keydown', this.handleKeyDown);
+                    setTimeout(() => {
+                        this.swiper.destroy(true, false);
+                        this.swiper = null;
+                        document.removeEventListener('keydown', this.handleKeyDown);
+                    }, 500);
                 }
             },
         },
