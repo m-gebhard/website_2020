@@ -1,4 +1,7 @@
 .project-filter {
+    @include spacing(margin, l, bottom);
+    @include spacing(margin, l, top);
+
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -10,8 +13,6 @@
 }
 
 .project-filter__wrapper {
-    @include spacing(margin, s, top);
-
     display: flex;
     flex-flow: row nowrap;
     align-items: center;

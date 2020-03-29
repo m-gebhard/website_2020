@@ -46,7 +46,7 @@
 }
 
 .hero-area__anchor-list {
-    @include spacing(margin, s, top);
+    @include spacing(margin, xs, top);
     @include text(h3);
 
     display: flex;

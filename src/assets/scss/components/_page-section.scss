@@ -41,7 +41,11 @@
 }
 
 .page-section__content-title {
-    @include spacing(margin, l, top);
+    @include spacing(margin, headline, bottom);
+}
+
+.page-section__content-title--no-margin {
+    margin: 0;
 }
 
 .page-section--grey {

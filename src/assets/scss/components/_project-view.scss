@@ -5,6 +5,7 @@
 
 .project-view__list {
     @include spacing(margin, xs, top left right bottom, negative);
+    @include spacing(margin, s, top);
 
     display: flex;
     flex-flow: column wrap;

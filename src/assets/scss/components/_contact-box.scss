@@ -1,4 +1,6 @@
 .contact-box {
+    @include spacing(margin, s, top);
+
     display: flex;
     flex-flow: column wrap;
 

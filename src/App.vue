@@ -13,7 +13,7 @@
             <page-section title="Projects" dark="true" edge="true">
                 <template slot="title">
                     <div class="project-filter">
-                        <h2 class="page-section__content-title">
+                        <h2 class="page-section__content-title page-section__content-title--no-margin">
                             Projects
                         </h2>
                         <div class="project-filter__wrapper">
