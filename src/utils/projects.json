@@ -17,7 +17,7 @@
             ],
             "video": "https://www.youtube.com/watch?v=2K4h6O3uTiM",
             "videoTeaser": "xl1.jpg",
-            "description": "X-Lights is probably my largest programming project, it combines a variety of technologies to create an unique LED controller.<br>Sound's simple, and to be honest, it is, but a lot of simplicity brings complexity.<br>With X-Lights (to be renamed) you can control multiple LED strips all over the world. You can synchronize them, or let them all play their own unique show.<br>X-Lights also supports sensors as inputs - you could use a light sensor to turn on your lights when it's dark, or let them glow red when your room has a certain temperature. As a programmer you can also easily create new light modes and extend existing functionality.<br><br>X-Lights consists of:<br>A NodeJS Server running a websocket<br>A VueJS webapp to control the lights<br>A Wemos D1 Mini microcontroller<br>A small C# client that analyzes music<br><br><a href='https://marius12375.github.io/#/' target='_blank'>Here's a little demo</a><br><a href='https://github.com/marius12375/x-lights-demo' target='_blank'>GitHub Repo</a>"
+            "description": "X-Lights is probably my largest programming project, it combines a variety of technologies to create an unique LED controller. Sound's simple, and to be honest, it is, but a lot of simplicity brings complexity. With X-Lights (to be renamed) you can control multiple LED strips all over the world. You can synchronize them, or let them all play their own unique show. X-Lights also supports sensors as inputs - you could use a light sensor to turn on your lights when it's dark, or let them glow red when your room has a certain temperature. As a programmer you can also easily create new light modes and extend existing functionality.<br><h4 class='project-overlay__content-description-sub-headline'>X-Lights consists of:</h4><ul class='project-overlay__content-description-list'><li class='project-overlay__content-description-list-item'>A NodeJS Server running a websocket</li><li class='project-overlay__content-description-list-item'>A VueJS webapp to control the lights</li><li class='project-overlay__content-description-list-item'>A Wemos D1 Mini microcontroller</li><li class='project-overlay__content-description-list-item'>A small C# client that analyzes music</li></ul><br><a href='https://marius12375.github.io/#/' target='_blank'>Here's a little Demo</a><br><a href='https://github.com/marius12375/x-lights-demo' target='_blank'>GitHub Repo</a>"
         },
         {
             "title": "Spacepilot",
@@ -28,7 +28,7 @@
             "images": [
                 "Spaceship.jpg"
             ],
-            "description": "Spacepilot is a game for android smartphones.<br>It's made with <a href='http://www.monogame.net/' target='_blank'>Monogame</a> for C#.<br>You play as an pilot of a spaceship, and your objective is to destroy enemy fighters.<br>Really simple, but highly addictive ;)<br> Can you be the hero who saves the world from these evil guys?<br><br>The project will be uploaded to my <a href='https://github.com/marius12375' target='_blank'>GitHub</a> account soon, stay tuned!"
+            "description": "Spacepilot is a game for android smartphones.It's made with <a href='http://www.monogame.net/' target='_blank'>Monogame</a> for C#.You play as an pilot of a spaceship, and your objective is to destroy enemy fighters.Really simple, but highly addictive ;) Can you be the hero who saves the world from these evil guys?The project will be uploaded to my <a href='https://github.com/marius12375' target='_blank'>GitHub</a> account soon, stay tuned!"
         },
         {
             "title": "Liquicalc",
@@ -41,7 +41,7 @@
                 "lq2.png",
                 "lq3.png"
             ],
-            "description": "LiquiCalc was my first project that's realised in Flutter with Google's <a href='https://dart.dev/' target='_blank'>Dart</a> programming language.<br>Flutter is a framework created to design Android and IOS apps easily.<br><br>With LiquiCalc you can create awesome aroma recipes for your e-liquids!<br>It includes a wide variety of pre-existing recipes, but you can also add your own ones.<br>You're able to share created recipes with friends and the community.<br><br>The project will be uploaded to my <a href='https://github.com/marius12375' target='_blank'>GitHub</a> account soon, stay tuned!"
+            "description": "LiquiCalc was my first project that's realised in Flutter with Google's <a href='https://dart.dev/' target='_blank'>Dart</a> programming language.Flutter is a framework created to design Android and IOS apps easily.With LiquiCalc you can create awesome aroma recipes for your e-liquids!It includes a wide variety of pre-existing recipes, but you can also add your own ones.You're able to share created recipes with friends and the community.The project will be uploaded to my <a href='https://github.com/marius12375' target='_blank'>GitHub</a> account soon, stay tuned!"
         },
         {
             "title": "BetterKLM",
@@ -53,7 +53,7 @@
                 "betterklm1.jpg",
                 "betterklm2.jpg"
             ],
-            "description": "BetterKLM is a C# application made for controlling the led keyboard of the MSI GE60 Apache gaming laptop.<br>The existing keyboard light manager misses some features I really wanted to have, so I built my own small application.<br>"
+            "description": "BetterKLM is a C# application made for controlling the led keyboard of the MSI GE60 Apache gaming laptop.The existing keyboard light manager misses some features I really wanted to have, so I built my own small application."
         }
     ]
 }

@@ -58,7 +58,7 @@
 }
 
 .project-overlay__content-scroll-container {
-    @include spacing(padding, l, top left right);
+    @include spacing(padding, l);
 
     display: flex;
     flex-direction: column;
@@ -86,14 +86,54 @@
     @include text(p2);
 
     width: 100%;
-    text-align: center;
+    font-weight: 300;
+
+    @include bp(m) {
+        max-width: 70vw;
+    }
 
     @include bp(l) {
-        max-width: 70vw;
+        max-width: 55vw;
     }
 
     @include bp(xl) {
         max-width: 1000px;
+    }
+}
+
+.project-overlay__content-description-sub-headline {
+    @include spacing(margin, s, top);
+    @include text(p2);
+
+    opacity: 0.75;
+}
+
+.project-overlay__content-description-list {
+    @include spacing(padding, xs, top);
+    @include spacing(margin, xs, top);
+
+    display: inline-flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+ }
+
+.project-overlay__content-description-list-item {
+    @include spacing(margin, xs, bottom);
+    @include text(p3);
+
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+
+    &:before {
+        @include spacing(margin, xs, right);
+
+        content: '•';
+        font-size: 25px;
+        color: $color-accent;
     }
 }
 
@@ -106,6 +146,7 @@
 
     .project-overlay__content-share-buttons-title {
         @include spacing(margin, s, top bottom);
+        @include text(p3);
 
         text-align: center;
     }
@@ -158,12 +199,13 @@
     background: darken($color-background-dark, 3%);
 
     @include bp(m) {
+        max-width: 70vw;
         min-height: 260px;
         margin-bottom: 42px;
     }
 
     @include bp(l) {
-        max-width: 65vw;
+        max-width: 55vw;
     }
 
     @include bp(xl) {
