@@ -99,12 +99,19 @@
 
             init() {
                 this.project = this.getModal('project-modal').payload;
+
+                document.addEventListener('keydown', this.handleKeyDown);
             },
             close() {
                 this.setModalOpenState({
                     key:       'project-modal',
                     openState: false,
                 });
+            },
+            handleKeyDown(event) {
+                if (event.which === 27) {
+                    this.close();
+                }
             },
             getImageStyle(image) {
                 const _image = require(`./../assets/images/projects/${image}`);
@@ -134,6 +141,8 @@
                             },
                         });
                     });
+                } else {
+                    document.removeEventListener('keydown', this.handleKeyDown);
                 }
             },
         },
