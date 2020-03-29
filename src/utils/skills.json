@@ -1,0 +1,29 @@
+{
+    "skills": [
+        {
+            "name": "PHP",
+            "percentage": 75,
+            "color": "#c699ff"
+        },
+        {
+            "name": "HTML<br>CSS",
+            "percentage": 90,
+            "color": "#abd8fb"
+        },
+        {
+            "name": "JS",
+            "percentage": 90,
+            "color": "#abd8fb"
+        },
+        {
+            "name": "Dart",
+            "percentage": 55,
+            "color": "#c699ff"
+        },
+        {
+            "name": "C#",
+            "percentage": 60,
+            "color": "#c699ff"
+        }
+    ]
+}

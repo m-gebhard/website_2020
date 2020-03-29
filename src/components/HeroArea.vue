@@ -15,7 +15,7 @@
                 Backend
             </li>
             <li class="hero-area__anchor-list-item">
-                Hardware
+                Electronics
             </li>
         </ul>
         <div class="hero-area__info">

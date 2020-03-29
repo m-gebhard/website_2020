@@ -31,7 +31,7 @@
                     Years of experience, passion and a wide variety of programming skills in different languages:
                 </p>
                 <ul class="profile__item-chart">
-                    <li v-for="(skill, i) in skills"
+                    <li v-for="(skill, i) in getSkills"
                         :key="`profile-chart-item-#${i}`"
                         :style="chartItemStyle(skill)"
                         v-html="skill.name"
@@ -44,40 +44,16 @@
 </template>
 
 <script>
+    import { skills } from '../utils/skills';
+
     export default {
-        name:    'profile',
-        data() {
-            return {
-                skills: [
-                    {
-                        name:       'PHP',
-                        percentage: 75,
-                        color:      '#c699ff'
-                    },
-                    {
-                        name:       'HTML<br>CSS',
-                        percentage: 90,
-                        color:      '#abd8fb'
-                    },
-                    {
-                        name:       'JS',
-                        percentage: 90,
-                        color:      '#abd8fb'
-                    },
-                    {
-                        name:       'Dart',
-                        percentage: 55,
-                        color:      '#c699ff'
-                    },
-                    {
-                        name:       'C#',
-                        percentage: 60,
-                        color:      '#c699ff'
-                    }
-                ]
-            };
+        name:     'profile',
+        computed: {
+            getSkills() {
+                return skills;
+            },
         },
-        methods: {
+        methods:  {
             chartItemStyle(item) {
                 return {
                     height:     `${item.percentage}%`,
