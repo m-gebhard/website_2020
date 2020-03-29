@@ -173,6 +173,50 @@
         background-position: center;
         background-repeat: no-repeat;
         border-radius: $border-radius-default;
+
+        &.swiper-slide--video {
+            @include text(h1);
+
+            position: relative;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+
+            transition: color $transition-regular;
+
+            @include bp(m) {
+                &:hover {
+                    color: lighten($color-primary, 15%);
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                z-index: 0;
+                background: radial-gradient(rgba($color-black, 0.2), rgba($color-black, 0.75));
+            }
+
+            span {
+                @include spacing(margin, s, top);
+                @include text(p2);
+
+                z-index: 1;
+                opacity: 0.75;
+                color: $color-white;
+            }
+
+            svg {
+                position: relative;
+                z-index: 1;
+            }
+        }
     }
 
     .swiper-pagination {

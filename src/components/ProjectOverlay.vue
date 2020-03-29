@@ -40,10 +40,20 @@
                     </div>
                 </social-sharing>
 
-                <div v-if="getImages.length > 0"
+                <div v-if="getImages.length > 0 || project.video"
                      class="project-overlay__content-slider-container"
                      :class="{'project-overlay__content-slider-container--disabled' : getImages.length < 2}">
+
                     <div class="swiper-wrapper">
+                        <a v-if="project.video"
+                           :style="getImageStyle(project.videoTeaser)"
+                           :href="project.video"
+                           target="_blank"
+                           class="swiper-slide swiper-slide--video">
+                            <font-awesome-icon icon="play-circle"></font-awesome-icon>
+                            <span>Watch on YouTube</span>
+                        </a>
+
                         <div v-for="(image, i) in getImages"
                              :key="`project-overlay-image-#${i}`"
                              :style="getImageStyle(image)"
