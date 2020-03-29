@@ -15,7 +15,7 @@
 
                 <social-sharing url="https://mgebhard.tk"
                                 title="Check out this project!"
-                                :description="getProjectDescriptionWithoutTags"
+                                :description="getFormattedProjectDescription"
                                 :quote="project.title"
                                 hashtags="developer,web,javascript,framework,fancy,vuejs,css,html"
                                 inline-template>
@@ -42,7 +42,7 @@
 
                 <div v-if="getImages.length > 0 || project.video"
                      class="project-overlay__content-slider-container"
-                     :class="{'project-overlay__content-slider-container--disabled' : getImages.length < 2}">
+                     :class="{'project-overlay__content-slider-container--disabled' : !isSwiperEnabled}">
 
                     <div class="swiper-wrapper">
                         <a v-if="project.video"
@@ -90,17 +90,28 @@
             isOpen() {
                 return this.getModalOpenState('project-modal');
             },
+            isSwiperEnabled() {
+                // Disable swiping if there are not enough images
+                if (!this.swiper) return false;
+                return this.project.images.length > this.getBreakpoints[this.swiper.currentBreakpoint].slidesPerView;
+            },
             getImages() {
                 return this.project.images;
             },
-            getProjectDescriptionWithoutTags() {
-                const div = document.createElement("div");
+            getFormattedProjectDescription() {
+                // Strip html tags and cut text after last sentence (.) within 500 words
+                const div     = document.createElement('div');
                 div.innerHTML = this.project.description;
 
-                const text = div.textContent || div.innerText || '';
+                const text            = div.textContent || div.innerText || '';
                 const thirdPointIndex = text.substr(0, 500).lastIndexOf('.');
 
                 return `${text.substr(0, thirdPointIndex)}.. Read more now!`;
+            },
+            getBreakpoints() {
+                return this.swiper
+                    ? this.swiper.passedParams.breakpoints
+                    : [];
             },
         },
         methods:  {
@@ -111,7 +122,6 @@
                     this.$refs.scrollContainer.scrollTo(0, 0);
                 });
                 this.project = this.getModal('project-modal').payload;
-
                 document.addEventListener('keydown', this.handleKeyDown);
             },
             close() {
@@ -137,10 +147,11 @@
 
                     this.$nextTick(() => {
                         this.swiper = new Swiper('.project-overlay__content-slider-container', {
-                            preloadImages: true,
-                            slidesPerView: 1,
                             spaceBetween:  10,
                             breakpoints:   {
+                                0:    {
+                                    slidesPerView: 1,
+                                },
                                 701:  {
                                     slidesPerView: 2,
                                 },
@@ -154,6 +165,8 @@
                         });
                     });
                 } else {
+                    this.swiper.destroy();
+                    this.swiper = null;
                     document.removeEventListener('keydown', this.handleKeyDown);
                 }
             },
