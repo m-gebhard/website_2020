@@ -75,6 +75,8 @@
 
 .project-overlay__content-slider-container--disabled {
     .swiper-wrapper {
+        display: flex;
+        justify-content: center;
         transform: translate3d(0, 0, 0) !important;
     }
     .swiper-pagination {
@@ -146,7 +148,7 @@
     @include spacing(margin, m, top);
 
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     color: $color-primary;
 
     .project-overlay__content-share-buttons-title {
