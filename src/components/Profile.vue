@@ -39,6 +39,24 @@
                     </li>
                 </ul>
             </li>
+            <!--<li class="profile__item profile__item&#45;&#45;skill">-->
+
+                <!--<p class="profile__item-description">-->
+
+                <!--</p>-->
+            <!--</li>-->
+            <!--<li class="profile__item profile__item&#45;&#45;skill">-->
+
+                <!--<p class="profile__item-description">-->
+
+                <!--</p>-->
+            <!--</li>-->
+            <!--<li class="profile__item profile__item&#45;&#45;skill">-->
+
+                <!--<p class="profile__item-description">-->
+
+                <!--</p>-->
+            <!--</li>-->
         </ul>
     </div>
 </template>
