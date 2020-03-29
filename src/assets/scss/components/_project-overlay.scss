@@ -8,7 +8,7 @@
     opacity: 0;
     pointer-events: none;
     background: $color-white;
-    transition: opacity $transition-regular;
+    transition: opacity $transition-regular $transition-fast * 0.75;
 }
 
 .project-overlay__background {
@@ -21,6 +21,7 @@
     z-index: 0;
     opacity: 0;
     transition: opacity $transition-regular;
+    animation: fadeOut $transition-long;
     background: linear-gradient(50deg, lighten($color-primary, 15%), lighten($color-primary, 25%), $color-accent);
 }
 
@@ -29,7 +30,7 @@
     pointer-events: auto;
 
     .project-overlay__background {
-        animation: fadeIn $transition-regular;
+        animation: fadeIn $transition-long * 1.5;
         animation-delay: $transition-long;
         animation-fill-mode: forwards;
     }
@@ -59,6 +60,8 @@
 .project-overlay__content-scroll-container {
     @include spacing(padding, l, top left right);
 
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -239,7 +242,7 @@
     @include spacing(padding, s);
     @include text(h2);
 
-    display: flex;
+    display: inline-flex;
     justify-content: flex-end;
 
     cursor: pointer;
@@ -260,5 +263,14 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
