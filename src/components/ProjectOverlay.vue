@@ -108,7 +108,7 @@
                 const text            = div.textContent || div.innerText || '';
                 const thirdPointIndex = text.substr(0, 500).lastIndexOf('.');
 
-                return `${text.substr(0, thirdPointIndex)}.. Read more now!`;
+                return `${text.substr(0, thirdPointIndex)}.. Read more at:`;
             },
             getBreakpoints() {
                 return this.swiper
