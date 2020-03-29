@@ -2,7 +2,7 @@
     <div v-if="project" class="project-overlay" :class="classes">
         <div class="project-overlay__background"></div>
         <div class="project-overlay__content">
-            <div class="project-overlay__content-scroll-container">
+            <div class="project-overlay__content-scroll-container" ref="scrollContainer">
                 <div class="project-overlay__content-close"
                      @click.prevent="close">
                     <font-awesome-icon icon="times"></font-awesome-icon>
@@ -98,6 +98,9 @@
             ...mapActions(['setModalOpenState']),
 
             init() {
+                this.$nextTick(() => {
+                    this.$refs.scrollContainer.scrollTo(0, 0);
+                });
                 this.project = this.getModal('project-modal').payload;
 
                 document.addEventListener('keydown', this.handleKeyDown);

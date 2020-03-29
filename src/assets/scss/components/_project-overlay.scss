@@ -87,6 +87,7 @@
 
     width: 100%;
     font-weight: 300;
+    text-align: center;
 
     @include bp(m) {
         max-width: 70vw;
@@ -99,6 +100,11 @@
     @include bp(xl) {
         max-width: 1000px;
     }
+}
+
+.project-overlay__content-description-link {
+    @include spacing(margin, xs, top);
+    display: block;
 }
 
 .project-overlay__content-description-sub-headline {
@@ -129,10 +135,9 @@
     margin: 0;
 
     &:before {
-        @include spacing(margin, xs, right);
-
         content: '•';
         font-size: 25px;
+        margin-right: 5px;
         color: $color-accent;
     }
 }
@@ -233,6 +238,10 @@
             @include bp(m) {
                 &:hover {
                     color: lighten($color-primary, 15%);
+
+                    &:after {
+                        background: rgba($color-black, 0.7);
+                    }
                 }
             }
 
@@ -245,7 +254,9 @@
                 height: 100%;
 
                 z-index: 0;
-                background: radial-gradient(rgba($color-black, 0.2), rgba($color-black, 0.75));
+                opacity: 1;
+                transition: background $transition-fast;
+                background: rgba($color-black, 0.5);
             }
 
             span {
