@@ -28,7 +28,7 @@
             "images": [
                 "Spaceship.jpg"
             ],
-            "description": "Spacepilot is a game for android smartphones.It's made with <a href='http://www.monogame.net/' target='_blank'>Monogame</a> for C#.You play as an pilot of a spaceship, and your objective is to destroy enemy fighters.Really simple, but highly addictive ;) Can you be the hero who saves the world from these evil guys?The project will be uploaded to my <a href='https://github.com/marius12375' target='_blank'>GitHub</a> account soon, stay tuned!"
+            "description": "Spacepilot is a game for android smartphones. It's made with <a href='http://www.monogame.net/' target='_blank'>Monogame</a> for C#. You play as an pilot of a spaceship, and your objective is to destroy enemy fighters. Really simple, but highly addictive ;) Can you be the hero who saves the world from these evil guys? The project will be uploaded to my <a href='https://github.com/marius12375' target='_blank'>GitHub</a> account soon, stay tuned!"
         },
         {
             "title": "Liquicalc",
@@ -41,7 +41,7 @@
                 "lq2.png",
                 "lq3.png"
             ],
-            "description": "LiquiCalc was my first project that's realised in Flutter with Google's <a href='https://dart.dev/' target='_blank'>Dart</a> programming language.Flutter is a framework created to design Android and IOS apps easily.With LiquiCalc you can create awesome aroma recipes for your e-liquids!It includes a wide variety of pre-existing recipes, but you can also add your own ones.You're able to share created recipes with friends and the community.The project will be uploaded to my <a href='https://github.com/marius12375' target='_blank'>GitHub</a> account soon, stay tuned!"
+            "description": "LiquiCalc was my first project that's realised in Flutter with Google's <a href='https://dart.dev/' target='_blank'>Dart</a> programming language. Flutter is a framework created to design Android and IOS apps easily. With LiquiCalc you can create awesome aroma recipes for your e-liquids! It includes a wide variety of pre-existing recipes, but you can also add your own ones. You're able to share created recipes with friends and the community. The project will be uploaded to my <a href='https://github.com/marius12375' target='_blank'>GitHub</a> account soon, stay tuned!"
         },
         {
             "title": "BetterKLM",
@@ -53,7 +53,7 @@
                 "betterklm1.jpg",
                 "betterklm2.jpg"
             ],
-            "description": "BetterKLM is a C# application made for controlling the led keyboard of the MSI GE60 Apache gaming laptop.The existing keyboard light manager misses some features I really wanted to have, so I built my own small application."
+            "description": "BetterKLM is a C# application made for controlling the led keyboard of the MSI GE60 Apache gaming laptop. The existing keyboard light manager misses some features I really wanted to have, so I built my own small application."
         }
     ]
 }

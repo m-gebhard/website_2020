@@ -15,7 +15,7 @@
 
                 <social-sharing url="https://mgebhard.tk"
                                 title="Check out this project!"
-                                :description="project.description"
+                                :description="getProjectDescriptionWithoutTags"
                                 :quote="project.title"
                                 hashtags="developer,web,javascript,framework,fancy,vuejs,css,html"
                                 inline-template>
@@ -92,6 +92,15 @@
             },
             getImages() {
                 return this.project.images;
+            },
+            getProjectDescriptionWithoutTags() {
+                const div = document.createElement("div");
+                div.innerHTML = this.project.description;
+
+                const text = div.textContent || div.innerText || '';
+                const thirdPointIndex = text.substr(0, 500).lastIndexOf('.');
+
+                return `${text.substr(0, thirdPointIndex)}.. Read more now!`;
             },
         },
         methods:  {
