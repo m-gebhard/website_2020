@@ -81,6 +81,7 @@
                 </div>
             </li>
             <li class="profile__item profile__item--skill">
+                <font-awesome-icon icon="microchip"></font-awesome-icon>
                 <h3>Hardware</h3>
                 <p class="profile__item-description">
                     In 11th class I learned on how to program micro-controllers and how they work, until today I love

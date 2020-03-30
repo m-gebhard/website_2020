@@ -17,6 +17,7 @@ import {
     faCode, faCoffee, faCaretUp,
     faCompass, faAt, faTools,
     faThList, faCaretDown,
+    faMicrochip,
 }                          from '@fortawesome/free-solid-svg-icons';
 import {
     faFacebook, faTwitch, faWhatsapp,
@@ -29,7 +30,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 library.add(faTimes, faEnvelope, faPlayCircle,
     faUser, faChartBar, faHeart,
-    faCode, faCoffee, faCaretUp,
+    faCode, faCoffee, faCaretUp, faMicrochip,
     faCompass, faAt, faTools, faCaretDown,
     faThList, faFacebook, faTwitch, faTwitter,
     faWhatsapp, faCodepen, faGithub, faYoutube,
