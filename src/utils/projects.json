@@ -2,7 +2,7 @@
     "projects": [
         {
             "title": "X-Lights",
-            "category": "Webapp | LEDs",
+            "category": "Led Controller [Node, VueJS, C++/#]",
             "tags": [
                 5,
                 4,
@@ -21,7 +21,7 @@
         },
         {
             "title": "Spacepilot",
-            "category": "Android Game [C#]",
+            "category": "Android Game [Monogame]",
             "tags": [
                 4
             ],
