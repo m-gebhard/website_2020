@@ -1,7 +1,7 @@
 <template>
     <main id="app">
         <div class="app"
-             v-scroll-spy="{offset: 100}"
+             v-scroll-spy
              v-scroll-spy-active="{selector: '.page-section', class: 'page-section--active'}">
 
             <hero-area id="page-section-start"></hero-area>

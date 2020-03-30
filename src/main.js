@@ -19,13 +19,11 @@ import {
     faThList, faCaretDown,
 }                          from '@fortawesome/free-solid-svg-icons';
 import {
-    faFacebook,
-    faTwitch,
-    faWhatsapp,
-    faCodepen,
-    faGithub,
-    faYoutube,
-    faTwitter,
+    faFacebook, faTwitch, faWhatsapp,
+    faCodepen, faGithub, faYoutube,
+    faTwitter, faVuejs, faSass,
+    faNodeJs, faLaravel, faHtml5,
+    faPhp,
 }                          from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -34,7 +32,8 @@ library.add(faTimes, faEnvelope, faPlayCircle,
     faCode, faCoffee, faCaretUp,
     faCompass, faAt, faTools, faCaretDown,
     faThList, faFacebook, faTwitch, faTwitter,
-    faWhatsapp, faCodepen, faGithub, faYoutube);
+    faWhatsapp, faCodepen, faGithub, faYoutube,
+    faVuejs, faSass, faNodeJs, faLaravel, faHtml5, faPhp);
 
 // Components
 Vue.component('font-awesome-icon', FontAwesomeIcon);
