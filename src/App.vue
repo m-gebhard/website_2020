@@ -1,6 +1,6 @@
 <template>
     <main id="app">
-        <div class="app"
+        <div class="section-container"
              v-scroll-spy
              v-scroll-spy-active="{selector: '.page-section', class: 'page-section--active'}">
 
