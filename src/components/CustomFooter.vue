@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li class="custom-footer__anchor-list-item">
-                    <a href="https://github.com/marius12375" target="_blank">
+                    <a href="https://github.com/m-gebhard" target="_blank">
                         <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
                     </a>
                 </li>

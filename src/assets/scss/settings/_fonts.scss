@@ -4,6 +4,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url('../fonts/open-sans-v17-latin-regular.eot'); /* IE9 Compat Modes */
     src: local('Open Sans Light'), local('OpenSans-Light'),
     url('../fonts/open-sans-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
@@ -16,6 +17,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 300;
+    font-display: swap;
     src: url('../fonts/open-sans-v17-latin-300.eot'); /* IE9 Compat Modes */
     src: local('Open Sans Light'), local('OpenSans-Light'),
     url('../fonts/open-sans-v17-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -29,6 +31,7 @@
     font-family: 'Short Stack';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url('../fonts/short-stack-v9-latin-regular.eot'); /* IE9 Compat Modes */
     src: local('Short Stack'), local('ShortStack'),
     url('../fonts/short-stack-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */

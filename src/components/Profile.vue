@@ -17,7 +17,7 @@
                 <p class="profile__item-description">
                     Write code. A lot of code<br>
                     My main focus is frontend development, I love to build fancy websites and share my designs and ideas
-                    with customers. Besides Frontend programming I also do backend and app-programming.
+                    with customers. Besides frontend programming I also do backend and app-programming.
                 </p>
             </li>
             <li class="profile__item">
