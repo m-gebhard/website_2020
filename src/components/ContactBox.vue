@@ -10,7 +10,7 @@
                            type="text">
                 </div>
                 <div class="contact-box__input">
-                    <label for="name">Email</label>
+                    <label for="email">Email</label>
                     <input v-html="inputEmail"
                            id="email"
                            required

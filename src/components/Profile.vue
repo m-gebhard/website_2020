@@ -17,7 +17,7 @@
                 <p class="profile__item-description">
                     Write code. A lot of code<br>
                     My main focus is frontend development, I love to build fancy websites and share my designs and ideas
-                    with customers.
+                    with customers. Besides Frontend programming I also do backend and app-programming.
                 </p>
             </li>
             <li class="profile__item">
@@ -59,7 +59,7 @@
             <li class="profile__item profile__item--skill">
                 <h3>BE Experience</h3>
                 <div class="profile__item-description">
-                    I have 3 1/2 years of backend experience with the following technologies:<br><br>
+                    I have 3 years of backend experience with the following technologies:<br><br>
                     <a  class="profile__item-description--link profile__item-description--link-with-icon"
                         href="https://nodejs.org/en/"
                         target="_blank">
@@ -67,7 +67,7 @@
                         <font-awesome-icon :icon="['fab', 'node-js']"></font-awesome-icon>
                     </a>
                     <a  class="profile__item-description--link profile__item-description--link-with-icon"
-                        href="https://nodejs.org/en/"
+                        href="https://en.wikipedia.org/wiki/PHP"
                         target="_blank">
                         PHP7
                         <font-awesome-icon :icon="['fab', 'php']"></font-awesome-icon>
