@@ -5,7 +5,9 @@
              v-scroll-spy
              v-scroll-spy-active="{selector: '.page-section', class: 'page-section--active'}">
 
-            <hero-area id="page-section-start"></hero-area>
+            <hero-area id="page-section-start">
+                <theme-switch v-model="isDarkmode" @input="updateTheme"></theme-switch>
+            </hero-area>
 
             <page-section title="About">
                 <profile></profile>
@@ -40,7 +42,6 @@
         </div>
 
         <project-overlay></project-overlay>
-        <theme-switch v-model="isDarkmode" @input="updateTheme"></theme-switch>
 
         <custom-footer></custom-footer>
     </main>

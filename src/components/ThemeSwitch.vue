@@ -1,7 +1,7 @@
 <template>
-    <div class="theme-switch">
+    <div class="theme-switch" v-scroll-spy-link="{selector: 'div'}">
         <div class="theme-switch__content"
-        :class="{'theme-switch__content--checked' : value}">
+             :class="{'theme-switch__content--checked' : value}">
             <input type="checkbox"
                    :checked="value"
                    @change="onInput">
