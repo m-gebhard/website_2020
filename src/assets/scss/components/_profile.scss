@@ -148,6 +148,9 @@
     cursor: pointer;
     margin-top: auto;
     user-select: none;
+    color: var(--black);
+    opacity: 0.85;
+    background: var(--primary-light);
     border-radius: $border-radius-default;
 
     @include bp(m) {
@@ -155,6 +158,18 @@
             opacity: 1;
             background: var(--primary-light);
         }
+    }
+
+    &:nth-of-type(2) {
+        background: var(--accent);
+    }
+
+    &:nth-of-type(3) {
+        background: var(--accent);
+    }
+
+    &:nth-of-type(4) {
+        background: var(--primary-light);
     }
 
     &:last-of-type {

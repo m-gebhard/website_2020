@@ -2,13 +2,11 @@
     "skills": [
         {
             "name": "PHP",
-            "percentage": 75,
-            "color": "#c699ff"
+            "percentage": 75
         },
         {
             "name": "HTML<br>CSS",
-            "percentage": 90,
-            "color": "#abd8fb"
+            "percentage": 90
         },
         {
             "name": "JS",
@@ -17,13 +15,11 @@
         },
         {
             "name": "Dart",
-            "percentage": 55,
-            "color": "#c699ff"
+            "percentage": 55
         },
         {
             "name": "C#",
-            "percentage": 60,
-            "color": "#c699ff"
+            "percentage": 60
         }
     ]
 }
