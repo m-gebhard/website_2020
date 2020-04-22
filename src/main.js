@@ -24,7 +24,7 @@ import {
     faCodepen, faGithub, faYoutube,
     faTwitter, faVuejs, faSass,
     faNodeJs, faLaravel, faHtml5,
-    faPhp,
+    faPhp, faBootstrap,
 }                          from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -34,7 +34,8 @@ library.add(faTimes, faEnvelope, faPlayCircle,
     faCompass, faAt, faTools, faCaretDown,
     faThList, faFacebook, faTwitch, faTwitter,
     faWhatsapp, faCodepen, faGithub, faYoutube,
-    faVuejs, faSass, faNodeJs, faLaravel, faHtml5, faPhp);
+    faVuejs, faSass, faNodeJs, faLaravel, faHtml5, faPhp,
+    faBootstrap);
 
 // Components
 Vue.component('font-awesome-icon', FontAwesomeIcon);

@@ -54,6 +54,12 @@
                         SASS
                         <font-awesome-icon :icon="['fab', 'sass']"></font-awesome-icon>
                     </a>
+                    <a  class="profile__item-description--link profile__item-description--link-with-icon"
+                        href="https://getbootstrap.com/"
+                        target="_blank">
+                        Bootstrap
+                        <font-awesome-icon :icon="['fab', 'bootstrap']"></font-awesome-icon>
+                    </a>
                 </div>
             </li>
             <li class="profile__item profile__item--skill">
