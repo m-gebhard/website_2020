@@ -7,7 +7,8 @@
 
     opacity: 0;
     pointer-events: none;
-    background: $color-white;
+    color: var(--font-dark);
+    background: var(--background);
     transition: opacity $transition-regular $transition-fast * 0.75;
 }
 
@@ -22,7 +23,7 @@
     opacity: 0;
     transition: opacity $transition-regular;
     animation: fadeOut $transition-long;
-    background: linear-gradient(50deg, lighten($color-primary, 15%), lighten($color-primary, 25%), $color-accent);
+    background: linear-gradient(50deg, var(--primary), var(--primary-light), var(--accent));
 }
 
 .project-overlay--open {
@@ -46,7 +47,7 @@
 
     z-index: 1;
     overflow: auto;
-    background: linear-gradient(to top, $color-background-dark, $color-background);
+    background: linear-gradient(to top, var(--background-dark), var(--background));
     clip-path: polygon(0 0, 50% 4%, 100% 0, 100% 50%, 100% 100%, 50% 96%, 0 100%, 0 50%);
 }
 
@@ -95,6 +96,7 @@
 
 .project-overlay__content-description-link {
     @include spacing(margin, xs, top);
+
     display: block;
 }
 
@@ -129,7 +131,7 @@
         content: '•';
         font-size: 25px;
         margin-right: 5px;
-        color: $color-accent;
+        color: var(--accent);
     }
 }
 
@@ -138,7 +140,7 @@
 
     display: flex;
     flex-flow: column nowrap;
-    color: $color-primary;
+    color: var(--primary);
 
     .project-overlay__content-share-buttons-title {
         @include spacing(margin, s, top bottom);
@@ -156,11 +158,12 @@
             @include text(h2);
 
             cursor: pointer;
-            transition: color $transition-fast;
+            transition: color $transition-fast, opacity $transition-fast;
 
             @include bp(m) {
                 &:hover {
-                    color: darken($color-primary, 20%);
+                    opacity: 0.75;
+                    color: var(--accent);
                 }
             }
 
@@ -168,8 +171,8 @@
                 @include spacing(margin, xs, left right);
 
                 content: '|';
-                opacity: 0.5;
-                color: darken($color-white, 20%);
+                opacity: 0.1;
+                color: var(--font-dark);
             }
 
             &:last-of-type:after {
@@ -192,7 +195,7 @@
     overflow: hidden;
     margin-bottom: 60px;
     border-radius: $border-radius-default;
-    background: darken($color-background-dark, 3%);
+    background: var(--background-darkest);
 
     @include bp(m) {
         max-width: 70vw;
@@ -229,10 +232,10 @@
 
             @include bp(m) {
                 &:hover {
-                    color: lighten($color-primary, 15%);
+                    color: var(--primary);
 
                     &:after {
-                        background: rgba($color-black, 0.7);
+                        background: rgba(#000, 0.7);
                     }
                 }
             }
@@ -248,7 +251,7 @@
                 z-index: 0;
                 opacity: 1;
                 transition: background $transition-fast;
-                background: rgba($color-black, 0.5);
+                background: rgba(#000, 0.55);
             }
 
             span {
@@ -258,7 +261,7 @@
                 width: 80%;
                 z-index: 1;
                 opacity: 0.75;
-                color: $color-white;
+                color: var(--white);
             }
 
             svg {
@@ -280,7 +283,7 @@
 
             width: 5px;
             height: 5px;
-            background: $color-accent;
+            background: var(--accent);
             border-radius: $border-radius-default !important;
             transition: opacity $transition-fast, transform, $transition-fast;
 
@@ -317,12 +320,12 @@
 
     cursor: pointer;
     margin-left: auto;
-    color: $color-accent;
-    transition: color $transition-regular;
+    color: var(--accent);
+    transition: opacity $transition-regular;
 
     @include bp(m) {
         &:hover {
-            color: darken($color-accent, 20%);
+            opacity: 0.75;
         }
     }
 }

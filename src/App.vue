@@ -1,6 +1,7 @@
 <template>
     <main id="app">
         <div class="section-container"
+             :class="{'transition-body' : isInTransition}"
              v-scroll-spy
              v-scroll-spy-active="{selector: '.page-section', class: 'page-section--active'}">
 
@@ -39,6 +40,7 @@
         </div>
 
         <project-overlay></project-overlay>
+        <theme-switch v-model="isDarkmode" @input="updateTheme"></theme-switch>
 
         <custom-footer></custom-footer>
     </main>
@@ -46,6 +48,7 @@
 
 <script>
     import { mapActions, mapGetters } from 'vuex';
+    import THEMES                     from './utils/themes';
     import AVAILABLE_TAGS             from './utils/availableTags';
     import HeroArea                   from './components/HeroArea';
     import PageSection                from './components/PageSection';
@@ -55,10 +58,12 @@
     import Profile                    from './components/Profile';
     import ScrollTop                  from './components/ScrollTop';
     import ProjectOverlay             from './components/ProjectOverlay';
+    import ThemeSwitch                from './components/ThemeSwitch';
 
     export default {
         name:       'app',
         components: {
+            ThemeSwitch,
             ProjectOverlay,
             ScrollTop,
             Profile,
@@ -70,6 +75,8 @@
         },
         data() {
             return {
+                isDarkmode:     false,
+                isInTransition: false,
                 selectedFilter: 0,
             };
         },
@@ -85,6 +92,22 @@
 
             updateFilter() {
                 this.setSelectedFilter(this.selectedFilter);
+            },
+            updateTheme() {
+                const selectedTheme = THEMES[this.isDarkmode ? 1 : 0];
+                const html          = document.documentElement;
+
+                if (selectedTheme) {
+                    Object.keys(selectedTheme).forEach((property) => {
+                        if (property === 'name') return;
+                        html.style.setProperty(property, selectedTheme[property]);
+                    });
+                    this.isInTransition = true;
+
+                    setTimeout(() => {
+                        this.isInTransition = false;
+                    }, 5000);
+                }
             },
         },
         watch:      {

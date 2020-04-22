@@ -12,10 +12,10 @@
     height: 100vh;
 
     text-align: center;
-    color: $color-white;
+    color: var(--font-light);
     // clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 96%, 0 100%, 0 0);
     clip-path: polygon(0 0, 50% 4%, 100% 0, 100% 50%, 100% 100%, 50% 96%, 0 100%, 0 50%);
-    background: linear-gradient(50deg, lighten($color-primary, 15%), lighten($color-primary, 25%), $color-accent);
+    background: linear-gradient(50deg, var(--primary), var(--primary-light), var(--accent));
 }
 
 .hero-area__info {
@@ -41,7 +41,7 @@
 
     width: 100px;
     height: 2px;
-    background: $color-white;
+    background: var(--font-light);
     box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -57,14 +57,14 @@
     @include spacing(padding, xs, left right bottom);
     @include text(p2);
 
-    color: darken($color-white, 5%);
+    color: var(--font-light);
     transition: color $transition-regular, opacity $transition-regular;
 
     &:after {
         @include spacing(margin, xs, left right);
 
         content: '|';
-        color: darken($color-white, 5%);
+        color: var(--font-light);
     }
 
     &:last-of-type:after {
@@ -81,7 +81,7 @@
 
     opacity: 0.75;
     cursor: pointer;
-    color: $color-white;
+    color: var(--font-light);
     transform: translateX(-50%);
     animation: 2s bounce infinite;
     line-height: 20px !important;

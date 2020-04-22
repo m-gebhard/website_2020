@@ -22,7 +22,7 @@
         @include spacing(margin, s, right);
         @include text(p2);
 
-        color: $color-primary;
+        color: var(--primary);
     }
 }
 
@@ -34,5 +34,6 @@
     outline: none;
     border: none;
     -webkit-appearance: none;
-    background: darken($color-background-dark, 5%);
+    color: var(--font-dark);
+    background: var(--background-darkest);
 }

@@ -1,3 +1,8 @@
+// 3rd
+@import '../../../node_modules/css-vars/css-vars';
+
+$css-vars-use-native: true;
+
 // Mixins
 @import './mixins/bp';
 @import './mixins/text';
@@ -12,6 +17,7 @@
 @import './components/hero-area';
 @import './components/scroll-top';
 @import './components/contact-box';
+@import './components/theme-switch';
 @import './components/project-view';
 @import './components/page-section';
 @import './components/custom-footer';
@@ -30,7 +36,8 @@
 
 body {
     margin: 0;
-    background: radial-gradient(ellipse at center, $color-background, $color-background-dark);
+    transition: background 2s;
+    background: radial-gradient(ellipse at center, var(--background), var(--background-dark));
 }
 
 #app {
@@ -42,6 +49,16 @@ body {
     align-items: center;
 
     overflow: hidden;
-    color: $color-font-light;
+    color: var(--font-color-dark);
     font-family: $font-default, Helvetica, Arial, sans-serif;
+}
+
+
+.transition-body {
+    p, span, h1, h2, h3, svg {
+        transition: color $transition-long, background $transition-long !important;
+    }
+    * {
+        transition: background $transition-regular;
+    }
 }

@@ -24,6 +24,7 @@
 
     cursor: pointer;
     user-select: none;
+    color: var(--font-dark);
     border-radius: $border-radius-default;
 
     @include bp(m) {
@@ -39,7 +40,7 @@
     @include spacing(padding, s);
 
     border-radius: inherit;
-    background: darken($color-background-dark, 3%);
+    background: var(--background-darkest);
 }
 
 .project-view__list-item-category {
@@ -47,7 +48,7 @@
     @include text(p3);
 
     opacity: 0.75;
-    color: $color-font-dark;
+    color: var(--font-dark);
     text-transform: uppercase;
 }
 

@@ -6,7 +6,7 @@
     justify-content: center;
     width: 100%;
 
-    background: $color-background;
+    background: var(--background);
 }
 
 .custom-footer__content {
@@ -20,7 +20,8 @@
     width: 100%;
     padding-top: 50px;
 
-    background: $color-background;
+    color: var(--font-dark);
+    background: var(--background);
 
     @include bp(m) {
         flex-flow: row nowrap;
@@ -56,14 +57,14 @@
         @include spacing(padding, xs);
 
         svg {
-            color: $color-primary;
+            color: var(--primary);
             transition: color $transition-fast
         }
     }
 
     @include bp(m) {
         &:hover a svg {
-            color: rgba($color-accent, 0.75);
+            color: var(--accent);
         }
     }
 }
@@ -83,10 +84,10 @@
 
     svg {
         margin-left: 2px;
-        color: $color-accent;
+        color: var(--accent);
 
         &:last-of-type {
-            color: $color-primary;
+            color: var(--primary);
         }
     }
 }

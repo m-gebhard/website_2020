@@ -45,8 +45,8 @@
 
     width: 100%;
     cursor: pointer;
-    color: $color-white;
-    background: $color-accent;
+    color: var(--font-contrast);
+    background: var(--accent);
     border-radius: $border-radius-default;
     text-transform: uppercase;
     border: none;
@@ -58,13 +58,13 @@
         margin-top: 0;
 
         &:hover {
-            background: darken($color-accent, 10%);
+            background: var(--primary-light);
         }
     }
 
     &:disabled {
         cursor: not-allowed;
-        background: darken($color-white, 30%);
+        background: var(--grey);
     }
 }
 
@@ -85,7 +85,7 @@
     label {
         @include text(p2);
 
-        color: $color-font-light;
+        color: var(--font-dark);
     }
 
     input, textarea {
@@ -97,7 +97,8 @@
         border: none;
         outline: none;
         border-radius: $border-radius-default;
-        background: darken($color-background-dark, 2%);
+        color: var(--font-dark);
+        background: var(--background-darkest);
     }
 
     textarea {
@@ -127,6 +128,8 @@
 
     h3 {
         @include spacing(padding, s, bottom);
+
+        color: var(--font-dark);
     }
 
     @include bp(l) {
@@ -147,6 +150,7 @@
     @include text(p3);
 
     width: 60%;
+    color: var(--font-dark);
 
     @include bp(m) {
         width: 75%;
@@ -162,17 +166,19 @@
     flex-flow: row nowrap;
 
     svg {
-        color: lighten($color-font-light, 20%);
-        opacity: 0.75;
+        color: var(--font-dark);
+        opacity: 0.5;
     }
 
     span, a {
         @include spacing(margin, xs, right);
+
         text-decoration: none;
-        color: $color-accent;
+        color: var(--accent);
 
         span {
-            color: lighten($color-font-light, 25%);
+            opacity: 0.75;
+            color: var(--font-dark);
         }
     }
 }

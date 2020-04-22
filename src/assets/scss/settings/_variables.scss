@@ -1,11 +1,31 @@
 $color-primary: #0b88e8;
+$color-primary-light: #49abf6;
 $color-accent: #aa66ff;
 $color-background: #fff;
 $color-background-dark: #f6f6f6;
-$color-font-light: #222;
+$color-background-dark: #f6f6f6;
+$color-background-darkest: #e9e9e9;
+$color-font-light: #fff;
 $color-font-dark: #232323;
+$color-font-contrast: $color-font-light;
 $color-black: #000;
+$color-grey: #f2f2f2;
 $color-white: #fff;
+
+@include css-vars((
+    --primary: $color-primary,
+    --primary-light: $color-primary-light,
+    --accent: $color-accent,
+    --background: $color-background,
+    --background-dark: $color-background-dark,
+    --background-darkest: $color-background-darkest,
+    --font-light: $color-font-light,
+    --font-dark: $color-font-dark,
+    --font-contrast: $color-font-contrast,
+    --white: $color-white,
+    --grey: $color-grey,
+    --black: $color-black,
+));
 
 $font-default: 'Open Sans';
 
