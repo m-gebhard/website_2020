@@ -81,6 +81,10 @@
                 selectedFilter: 0,
             };
         },
+        created() {
+            this.isDarkmode = window.localStorage.getItem('darkmode') === 'true';
+            this.updateTheme();
+        },
         computed:   {
             ...mapGetters(['isAnyModalOpened']),
 
@@ -104,10 +108,11 @@
                         html.style.setProperty(property, selectedTheme[property]);
                     });
                     this.isInTransition = true;
+                    window.localStorage.setItem('darkmode', this.isDarkmode);
 
                     setTimeout(() => {
                         this.isInTransition = false;
-                    }, 5000);
+                    }, 500);
                 }
             },
         },
