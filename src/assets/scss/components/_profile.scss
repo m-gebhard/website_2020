@@ -11,7 +11,7 @@
 
 .profile__item {
     @include spacing(margin, xs, top right left);
-    @include spacing(padding, s);
+    @include spacing(padding, l);
     @include spacing(padding, m, bottom);
 
     position: relative;
