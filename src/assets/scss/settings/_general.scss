@@ -70,3 +70,8 @@ hr {
     opacity: 0.5;
     background: linear-gradient(50deg, var(--primary), var(--primary-light), var(--accent));
 }
+
+::selection {
+    color: var(--font-contrast);
+    background: var(--primary);
+}

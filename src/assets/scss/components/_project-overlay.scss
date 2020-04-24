@@ -136,8 +136,10 @@
 }
 
 .project-overlay__content-share-buttons {
+    @include spacing(margin, s, bottom);
     @include spacing(margin, m, top);
 
+    min-height: 75px;
     display: flex;
     flex-flow: column nowrap;
     color: var(--primary);
@@ -328,6 +330,12 @@
             opacity: 0.75;
         }
     }
+}
+
+.project-overlay__hidden-block {
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
 }
 
 @keyframes fadeIn {

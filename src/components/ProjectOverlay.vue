@@ -62,6 +62,7 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
+                <div class="project-overlay__hidden-block"></div>
             </div>
         </div>
     </div>
