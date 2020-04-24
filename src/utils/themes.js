@@ -2,7 +2,7 @@ export default [
     {
         name:                   'light',
         '--primary':            '#0b88e8',
-        '--primary-light':      '#49abf6',
+        '--primary-light':      '#7ac2f9',
         '--accent':             '#aa66ff',
         '--background':         '#fff',
         '--background-dark':    '#f6f6f6',

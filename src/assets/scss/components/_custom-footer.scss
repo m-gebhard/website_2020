@@ -51,7 +51,7 @@
 
 .custom-footer__anchor-list-item {
     @include spacing(margin, s, left);
-    @include text(p1);
+    @include text(h2);
 
     a {
         @include spacing(padding, xs);
