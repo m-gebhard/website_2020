@@ -12,7 +12,7 @@ import 'swiper/css/swiper.min.css';
 // font awesome
 import { library }         from '@fortawesome/fontawesome-svg-core';
 import {
-    faTimes, faEnvelope, faPlayCircle,
+    faTimes, faEnvelope, faPlayCircle, faPaperPlane,
     faUser, faChartBar, faHeart,
     faCode, faCoffee, faCaretUp,
     faCompass, faAt, faTools,
@@ -35,7 +35,7 @@ library.add(faTimes, faEnvelope, faPlayCircle,
     faThList, faFacebook, faTwitch, faTwitter,
     faWhatsapp, faCodepen, faGithub, faYoutube,
     faVuejs, faSass, faNodeJs, faLaravel, faHtml5, faPhp,
-    faBootstrap);
+    faBootstrap, faPaperPlane);
 
 // Components
 Vue.component('font-awesome-icon', FontAwesomeIcon);

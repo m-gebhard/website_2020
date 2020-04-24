@@ -53,12 +53,29 @@
     outline: none;
     transition: background $transition-regular;
 
+    svg {
+        transform: scale(0);
+        max-width: 0;
+        overflow: hidden;
+        transition: transform $transition-regular,
+        margin-left $transition-regular,
+        max-width $transition-regular;
+        transform-origin: right;
+    }
+
     @include bp(m) {
         width: auto;
         margin-top: 0;
 
         &:hover {
             background: var(--primary-light);
+
+            svg {
+                margin-left: 10px;
+
+                max-width: 50px;
+                transform: scale(1);
+            }
         }
     }
 
@@ -98,7 +115,17 @@
         outline: none;
         border-radius: $border-radius-default;
         color: var(--font-dark);
+        caret-color: var(--accent);
         background: var(--background-darkest);
+
+        // overwrite autofill styles
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            transition: background-color 5000s ease-in-out 0s;
+            -webkit-text-fill-color: var(--font-dark) !important;
+        }
     }
 
     textarea {

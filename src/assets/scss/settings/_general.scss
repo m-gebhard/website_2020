@@ -55,6 +55,11 @@ h3 {
 a {
     text-decoration: none;
     color: var(--primary);
+    transition: color $transition-fast;
+
+    &:hover {
+        color: var(--accent);
+    }
 }
 
 hr {

@@ -31,7 +31,8 @@
                 </div>
             </div>
             <button class="contact-box__form-submit" type="submit">
-                Submit
+                <span>Submit</span>
+                <font-awesome-icon icon="paper-plane"></font-awesome-icon>
             </button>
         </form>
         <div class="contact-box__details">
