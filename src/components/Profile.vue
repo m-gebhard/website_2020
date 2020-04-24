@@ -92,8 +92,7 @@
                 <p class="profile__item-description">
                     In 11th class I learned on how to program micro-controllers and how they work, until today I love
                     building little things with uC's and other hardware. A good example is my project
-                    <span class="profile__item-description--link" @click="$parent.$parent.$scrollTo(2)">X-Lights</span>
-                    .
+                    <span class="profile__item-description--link" @click="$parent.$parent.$scrollTo(2)">X-Lights</span>.
                 </p>
             </li>
         </ul>
