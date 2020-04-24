@@ -87,12 +87,14 @@
                 </div>
             </li>
             <li class="profile__item profile__item--skill">
-                <font-awesome-icon icon="microchip"></font-awesome-icon>
-                <h3>Hardware</h3>
+                <font-awesome-icon icon="rocket"></font-awesome-icon>
+                <h3>Apps and Games</h3>
                 <p class="profile__item-description">
-                    In 11th class I learned on how to program micro-controllers and how they work, until today I love
-                    building little things with uC's and other hardware. A good example is my project
-                    <span class="profile__item-description--link" @click="$parent.$parent.$scrollTo(2)">X-Lights</span>.
+                    Besides web programming I also love to build apps and small desktop games.
+                    Back then in C# / Java, now with Dart and Javascript, and there's always more to explore!
+                    Take a look at my
+                    <span class="profile__item-description--link" @click="$parent.$parent.$scrollTo(2)">projects</span>
+                    to learn more.
                 </p>
             </li>
         </ul>
