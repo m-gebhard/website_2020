@@ -108,6 +108,7 @@
     @include text(p3);
 
     margin: 0 14px 18px 14px;
+    transition: color $transition-regular;
 
     svg {
         @include spacing(margin, xs, left);
@@ -115,12 +116,16 @@
 
         opacity: 0.75;
         color: var(--accent);
-        transition: opacity $transition-fast;
+        transition: opacity $transition-regular;
     }
 
     @include bp(m) {
-        &:hover svg {
-            opacity: 0.9;
+        &:hover {
+            color: var(--accent);
+
+            svg {
+                opacity: 1;
+            }
         }
     }
 }
