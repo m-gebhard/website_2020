@@ -97,7 +97,8 @@
 .project-overlay__content-description-link {
     @include spacing(margin, xs, top);
 
-    display: block;
+    line-height: 30px;
+    display: inline-block;
 }
 
 .project-overlay__content-description-sub-headline {
@@ -136,8 +137,8 @@
 }
 
 .project-overlay__content-share-buttons {
-    @include spacing(margin, s, bottom);
-    @include spacing(margin, m, top);
+    @include spacing(margin, m, bottom);
+    @include spacing(margin, s, top);
 
     min-height: 75px;
     display: flex;
@@ -195,14 +196,12 @@
     min-height: 230px;
     max-height: 250px;
     overflow: hidden;
-    margin-bottom: 60px;
     border-radius: $border-radius-default;
     background: var(--background-darkest);
 
     @include bp(m) {
         max-width: 70vw;
         min-height: 260px;
-        margin-bottom: 42px;
     }
 
     @include bp(l) {
