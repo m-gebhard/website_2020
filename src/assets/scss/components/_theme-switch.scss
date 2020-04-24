@@ -2,9 +2,15 @@
     @include spacing(padding, m);
 
     opacity: 0;
-    position: fixed;
-    right: 20px;
-    top: 20px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+
+    @include bp(m) {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+    }
 }
 
 .theme-switch__content {
