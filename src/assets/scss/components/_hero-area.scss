@@ -18,6 +18,11 @@
     background: linear-gradient(50deg, var(--primary), var(--primary-light), var(--accent));
 }
 
+.hero-area__title {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 .hero-area__info {
     @include text(p3);
 
@@ -87,6 +92,7 @@
     line-height: 20px !important;
 
     &:hover {
+        color: var(--font-light);
         animation-play-state: paused;
     }
 }

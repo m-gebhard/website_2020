@@ -12,10 +12,10 @@
                 Frontend
             </li>
             <li class="hero-area__anchor-list-item">
-                Backend
+                Apps
             </li>
             <li class="hero-area__anchor-list-item">
-                Electronics
+                Backend
             </li>
         </ul>
         <a @click="$parent.$scrollTo(1)" class="hero-area__jump-caret">
