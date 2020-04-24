@@ -83,7 +83,7 @@
     @include spacing(margin, xs, bottom);
 
     svg {
-        margin-left: 2px;
+        margin: 0 2px;
         color: var(--accent);
 
         &:last-of-type {
