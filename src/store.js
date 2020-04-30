@@ -6,11 +6,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state:     {
         selectedFilter: 0,
+        darkMode:       false,
         modals:         [],
     },
     mutations: {
         SET_SELECTED_FILTER(state, filter) {
             state.selectedFilter = filter;
+        },
+        SET_DARK_MODE(state, darkMode) {
+            state.darkMode = darkMode;
         },
         ADD_MODAL_OPEN_STATE(state, { key, openState, payload }) {
             state.modals.push({
@@ -29,6 +33,9 @@ export default new Vuex.Store({
         setSelectedFilter({ commit }, filter) {
             commit('SET_SELECTED_FILTER', filter);
         },
+        setDarkMode({ commit }, darkMode) {
+            commit('SET_DARK_MODE', darkMode);
+        },
         setModalOpenState({ commit, state }, options) {
             if (state.modals.find((m) => m.key === options.key)) {
                 commit('UPDATE_MODAL_STATE', options);
@@ -38,6 +45,7 @@ export default new Vuex.Store({
         },
     },
     getters:   {
+        isDarkMode:        state => state.darkMode,
         getSelectedFilter: state => state.selectedFilter,
         getModal:          state => key => {
             return state.modals.find((m) => m.key === key);

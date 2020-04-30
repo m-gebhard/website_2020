@@ -6,7 +6,7 @@
              v-scroll-spy-active="{selector: '.page-section', class: 'page-section--active'}">
 
             <hero-area id="page-section-start">
-                <theme-switch v-model="isDarkmode" @input="updateTheme"></theme-switch>
+                <theme-switch :value="isDarkMode" @input="updateTheme"></theme-switch>
             </hero-area>
 
             <page-section title="About">
@@ -76,30 +76,28 @@
         },
         data() {
             return {
-                isDarkmode:     false,
                 isInTransition: false,
                 selectedFilter: 0,
             };
         },
         created() {
-            this.isDarkmode = window.localStorage.getItem('darkmode') === 'true';
-            this.updateTheme();
+            this.updateTheme(window.localStorage.getItem('darkmode') === 'true');
         },
         computed:   {
-            ...mapGetters(['isAnyModalOpened']),
+            ...mapGetters(['isAnyModalOpened', 'isDarkMode']),
 
             getAvailableTags() {
                 return AVAILABLE_TAGS;
             },
         },
         methods:    {
-            ...mapActions(['setSelectedFilter']),
+            ...mapActions(['setSelectedFilter', 'setDarkMode']),
 
             updateFilter() {
                 this.setSelectedFilter(this.selectedFilter);
             },
-            updateTheme() {
-                const selectedTheme = THEMES[this.isDarkmode ? 1 : 0];
+            updateTheme(darkMode) {
+                const selectedTheme = THEMES[darkMode ? 1 : 0];
                 const html          = document.documentElement;
 
                 if (selectedTheme) {
@@ -108,7 +106,9 @@
                         html.style.setProperty(property, selectedTheme[property]);
                     });
                     this.isInTransition = true;
-                    window.localStorage.setItem('darkmode', this.isDarkmode);
+
+                    this.setDarkMode(darkMode);
+                    window.localStorage.setItem('darkmode', darkMode);
 
                     setTimeout(() => {
                         this.isInTransition = false;
