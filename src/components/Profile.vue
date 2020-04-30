@@ -6,7 +6,7 @@
                 <h3>Who am I?</h3>
                 <p class="profile__item-description">
                     My Name is Marius Gebhard.<br>
-                    I am 22 years old and I live in Mannheim, Germany.
+                    I am 23 years old and I live in Mannheim, Germany.
                     In my free time I like to code and do sports.
                     What do I code? Anything you can imagine - it just depends on the project I am working on.
                 </p>
