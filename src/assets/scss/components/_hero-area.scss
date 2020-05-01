@@ -1,21 +1,45 @@
 .hero-area {
     @include spacing(padding, xl, left right);
 
-    position: relative;
+    width: 100%;
+    height: 100vh;
+    clip-path: polygon(0 0, 50% 4%, 100% 0, 100% 50%, 100% 100%, 50% 96%, 0 100%, 0 50%);
+    padding-bottom: 70px;
+    background-image: url(../images/background_xs.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include bp(m) {
+        background-size: auto;
+        background-image: url(../images/background_xl.jpg);
+    }
+}
+
+.hero-area-content {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    padding-bottom: 70px;
-
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    z-index: 2;
+    color: var(--font-hero);
+}
 
-    text-align: center;
-    color: var(--font-light);
-    // clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 96%, 0 100%, 0 0);
-    clip-path: polygon(0 0, 50% 4%, 100% 0, 100% 50%, 100% 100%, 50% 96%, 0 100%, 0 50%);
-    background: linear-gradient(50deg, var(--primary), var(--primary-light), var(--accent));
+.hero-area-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.9;
+    background: var(--background-dark);
+
+    @include bp(m) {
+        opacity: 0.75;
+    }
 }
 
 .hero-area__title {
@@ -39,6 +63,8 @@
 .hero-area__icon {
     @include spacing(margin, s, top bottom);
     @include text(h2);
+
+    color: var(--primary);
 }
 
 .hero-area__divider {
@@ -46,8 +72,8 @@
 
     width: 100px;
     height: 2px;
-    background: var(--font-light);
-    box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to right, var(--primary), var(--accent));
 }
 
 .hero-area__anchor-list {
@@ -62,14 +88,13 @@
     @include spacing(padding, xs, left right bottom);
     @include text(p2);
 
-    color: var(--font-light);
     transition: color $transition-regular, opacity $transition-regular;
 
     &:after {
         @include spacing(margin, xs, left right);
 
         content: '|';
-        color: var(--font-light);
+        color: var(--accent);
     }
 
     &:last-of-type:after {
@@ -86,13 +111,13 @@
 
     opacity: 0.75;
     cursor: pointer;
-    color: var(--font-light);
+    color: var(--font-dark);
     transform: translateX(-50%);
     animation: 2s bounce infinite;
     line-height: 20px !important;
 
     &:hover {
-        color: var(--font-light);
+        color: var(--accent);
         animation-play-state: paused;
     }
 }
