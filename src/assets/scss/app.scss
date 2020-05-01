@@ -29,36 +29,3 @@ $css-vars-use-native: true;
 @import './animations/appear';
 @import './animations/bounce';
 @import './animations/pop-up';
-
-*, *:before, *.after {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    transition: background 2s;
-    background: radial-gradient(ellipse at center, var(--background), var(--background-dark));
-}
-
-#app {
-    @include text(p2);
-
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    overflow: hidden;
-    color: var(--font-color-dark);
-    font-family: $font-default, Helvetica, Arial, sans-serif;
-}
-
-
-.transition-body {
-    p, span, h1, h2, h3, svg {
-        transition: color $transition-long, background $transition-long !important;
-    }
-    * {
-        transition: background $transition-regular;
-    }
-}
