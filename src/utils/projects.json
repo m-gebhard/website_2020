@@ -37,9 +37,9 @@
                 6
             ],
             "images": [
-                "lq1.png",
-                "lq2.png",
-                "lq3.png"
+                "lq1.jpg",
+                "lq2.jpg",
+                "lq3.jpg"
             ],
             "description": "LiquiCalc was my first project that's realised in Flutter with Google's <a href='https://dart.dev/' target='_blank'>Dart</a> programming language. Flutter is a framework created to design Android and IOS apps easily. With LiquiCalc you can create awesome aroma recipes for your e-liquids! It includes a wide variety of pre-existing recipes, but you can also add your own ones. You're able to share created recipes with friends and the community. The project will be uploaded to my <a href='https://github.com/m-gebhard' target='_blank'>GitHub</a> account soon, stay tuned!"
         },
