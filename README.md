@@ -1,4 +1,4 @@
-# website3.0
+# website-2020
 
 ## Project setup
 ```
@@ -25,5 +25,6 @@ yarn run test
 yarn run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Credits
+SCSS Mixins by
+https://github.com/andre9x
