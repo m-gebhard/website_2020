@@ -108,3 +108,31 @@ hr {
     color: var(--font-contrast);
     background: var(--primary);
 }
+
+
+.swiper-pagination {
+    @include spacing(margin, xs, bottom);
+
+    width: 100%;
+    top: auto !important;
+    bottom: 0 !important;
+
+    .swiper-pagination-bullet {
+        @include spacing(margin, xs, left right);
+
+        width: 5px;
+        height: 5px;
+        background: var(--accent);
+        border-radius: $border-radius-default !important;
+        transition: opacity $transition-fast, transform, $transition-fast;
+
+        &.swiper-pagination-bullet-active {
+            transform: scale(1.1);
+        }
+
+        @include bp(m) {
+            width: 7px;
+            height: 7px;
+        }
+    }
+}

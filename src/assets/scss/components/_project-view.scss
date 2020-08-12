@@ -1,25 +1,20 @@
 .project-view {
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
+    overflow: hidden;
 }
 
 .project-view__list {
-    @include spacing(margin, xs, top left right bottom, negative);
     @include spacing(margin, s, top);
 
-    display: flex;
-    flex-flow: column wrap;
-
-    @include bp(m) {
-        flex-flow: row wrap;
-    }
+    flex-direction: row !important;
 }
 
 .project-view__list-item {
     @include spacing(padding, xs);
 
     position: relative;
-    flex: 1 0 auto;
     margin: 0;
     max-height: 360px;
 
@@ -27,30 +22,35 @@
     user-select: none;
     color: var(--font-dark);
     border-radius: $border-radius-default;
-
-    @include bp(m) {
-        flex: 0 0 50%;
-    }
-
-    @include bp(xl) {
-        flex: 0 0 33%;
-    }
 }
 
 .project-view__list-item-content {
     @include spacing(padding, s);
 
     border-radius: inherit;
+    box-shadow: var(--box-shadow);
     background: var(--background-darkest);
 }
 
+.project-view__list-item-title {
+    hyphens: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .project-view__list-item-category {
-    @include spacing(margin, s, top);
+    @include spacing(margin, xs, top);
     @include text(p3);
 
     opacity: 0.75;
     color: var(--font-dark);
     text-transform: uppercase;
+
+    hyphens: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .project-view__list-item-image {

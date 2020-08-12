@@ -14,6 +14,7 @@ export default [
         '--white':              '#fff',
         '--grey':               '#f2f2f2',
         '--black':              '#000',
+        '--box-shadow':         '0 0 1px -1px rgba(0,0,0,.2), 0 1px 2px 0 rgba(0,0,0,.14), 0 1px 2px 0 rgba(0,0,0,0)'
     },
     {
         name:                   'dark',
@@ -30,5 +31,6 @@ export default [
         '--white':              '#fff',
         '--grey':               '#f2f2f2',
         '--black':              '#000',
+        '--box-shadow':         '0 0 4px -1px rgba(0,0,0,.2), 0 3px 2px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12)'
     },
 ];

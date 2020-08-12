@@ -148,6 +148,10 @@
                 if (open) {
                     this.init();
 
+                    if (this.swiper) {
+                        this.swiper.destroy();
+                    }
+
                     this.$nextTick(() => {
                         this.swiper = new Swiper('.project-overlay__content-slider-container', {
                             spaceBetween: 10,
