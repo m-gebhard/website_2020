@@ -1,6 +1,22 @@
 {
     "projects": [
         {
+            "title": "Cherry Switch Breakout Board",
+            "category": "Breakout Board [PCB, C++]",
+            "tags": [
+                5,
+                7
+            ],
+            "images": [
+                "ckm1.jpg",
+                "ckm2.jpg",
+                "ckm3.jpg"
+            ],
+            "description": "Learning new things is great, but it get's even better when learning is fun!<br>And that's why I decided to create this little Breakout Board for 2x3 Cherry switches, illuminated by the WS2812b led's on my way of learning PCB design. This board can be used with any microcontroller that has at least 7 digital pins and a 5V output. Each switch has an led above, all of them can be controlled separately. The board can be used as a mini keypad, a media controller (HID), or any other application that needs switches. For the first PCB project, I think it turned out very nice, what do you think? If you're interested, take a look at the schematics and maybe create something own with it?<br><br><a class='project-overlay__content-description-link' href='https://easyeda.com/marius12375/cherry_key_module' target='_blank'>Schematic + PCB</a>",
+            "video": "https://youtu.be/Aw7-uy8BW9g",
+            "videoTeaser": "ckm2.jpg"
+        },
+        {
             "title": "X-Lights",
             "category": "Led Controller [Node, VueJS, C++/#]",
             "tags": [

@@ -6,4 +6,5 @@ export default {
     4: 'C#',
     5: 'C++',
     6: 'Dart',
+    7: 'Electronics'
 };
