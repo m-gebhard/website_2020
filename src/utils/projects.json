@@ -1,22 +1,6 @@
 {
     "projects": [
         {
-            "title": "Cherry Switch Breakout Board",
-            "category": "Breakout Board [PCB, C++]",
-            "tags": [
-                5,
-                7
-            ],
-            "images": [
-                "ckm1.jpg",
-                "ckm2.jpg",
-                "ckm3.jpg"
-            ],
-            "description": "Learning new things is great, but it get's even better when learning is fun!<br>And that's why I decided to create this little Breakout Board for 2x3 Cherry switches, illuminated by the WS2812b led's on my way of learning PCB design. This board can be used with any microcontroller that has at least 7 digital pins and a 5V output. Each switch has an led above, all of them can be controlled separately. The board can be used as a mini keypad, a media controller (HID), or any other application that needs switches. For the first PCB project, I think it turned out very nice, what do you think? If you're interested, take a look at the schematics and maybe create something own with it?<br><br><a class='project-overlay__content-description-link' href='https://easyeda.com/marius12375/cherry_key_module' target='_blank'>Schematic + PCB</a>",
-            "video": "https://youtu.be/Aw7-uy8BW9g",
-            "videoTeaser": "ckm2.jpg"
-        },
-        {
             "title": "X-Lights",
             "category": "Led Controller [Node, VueJS, C++/#]",
             "tags": [
@@ -47,6 +31,34 @@
             "description": "Spacepilot is a game for android smartphones. It's made with <a href='http://www.monogame.net/' target='_blank'>Monogame</a> for C#. You play as an pilot of a spaceship, and your objective is to destroy enemy fighters. Really simple, but highly addictive! Can you be the hero who saves the world from these evil guys? The project will be uploaded to my <a href='https://github.com/m-gebhard' target='_blank'>GitHub</a> account soon, stay tuned!"
         },
         {
+            "title": "BetterKLM",
+            "category": "Keyboard Light Manager [C#]",
+            "tags": [
+                4
+            ],
+            "images": [
+                "betterklm1.jpg",
+                "betterklm2.jpg"
+            ],
+            "description": "BetterKLM is a C# application made for controlling the led keyboard of the MSI GE60 Apache gaming laptop. The existing keyboard light manager misses some features I really wanted to have, so I built my own small application."
+        },
+        {
+            "title": "Cherry Switch Breakout Board",
+            "category": "Breakout Board [PCB, C++]",
+            "tags": [
+                5,
+                7
+            ],
+            "images": [
+                "ckm1.jpg",
+                "ckm2.jpg",
+                "ckm3.jpg"
+            ],
+            "description": "Learning new things is great, but it get's even better when learning is fun!<br>And that's why I decided to create this little Breakout Board for 2x3 Cherry switches, illuminated by the WS2812b led's on my way of learning PCB design. This board can be used with any microcontroller that has at least 7 digital pins and a 5V output. Each switch has an led above, all of them can be controlled separately. The board can be used as a mini keypad, a media controller (HID), or any other application that needs switches. For the first PCB project, I think it turned out very nice, what do you think? If you're interested, take a look at the schematics and maybe create something own with it?<br><br><a class='project-overlay__content-description-link' href='https://easyeda.com/marius12375/cherry_key_module' target='_blank'>Schematic + PCB</a>",
+            "video": "https://youtu.be/Aw7-uy8BW9g",
+            "videoTeaser": "ckm2.jpg"
+        },
+        {
             "title": "Liquicalc",
             "category": "Liquid Calculator [Flutter]",
             "tags": [
@@ -58,18 +70,6 @@
                 "lq3.jpg"
             ],
             "description": "LiquiCalc was my first project that's realised in Flutter with Google's <a href='https://dart.dev/' target='_blank'>Dart</a> programming language. Flutter is a framework created to design Android and IOS apps easily. With LiquiCalc you can create awesome aroma recipes for your e-liquids! It includes a wide variety of pre-existing recipes, but you can also add your own ones. You're able to share created recipes with friends and the community. The project will be uploaded to my <a href='https://github.com/m-gebhard' target='_blank'>GitHub</a> account soon, stay tuned!"
-        },
-        {
-            "title": "BetterKLM",
-            "category": "Keyboard Light Manager [C#]",
-            "tags": [
-                4
-            ],
-            "images": [
-                "betterklm1.jpg",
-                "betterklm2.jpg"
-            ],
-            "description": "BetterKLM is a C# application made for controlling the led keyboard of the MSI GE60 Apache gaming laptop. The existing keyboard light manager misses some features I really wanted to have, so I built my own small application."
         }
     ]
 }

@@ -167,7 +167,8 @@
                                 }
                             },
                             pagination:   {
-                                el: '.swiper-pagination',
+                                clickable: true,
+                                el:        '.swiper-pagination',
                             },
                         });
                     });

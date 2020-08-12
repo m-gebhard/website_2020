@@ -75,9 +75,9 @@
                 this.$nextTick(() => {
                     this.swiper = new Swiper('.project-view', {
                         slidesPerColumnFill: 'row',
-                        breakpoints: {
+                        breakpoints:         {
                             0:    {
-                                slidesPerView:   1,
+                                slidesPerView:   1.05,
                                 slidesPerColumn: 2,
                             },
                             421:  {
@@ -89,8 +89,9 @@
                                 slidesPerColumn: 2,
                             }
                         },
-                        pagination:  {
-                            el: '.swiper-pagination',
+                        pagination:          {
+                            clickable: true,
+                            el:        '.swiper-pagination',
                         },
                     });
                 });
