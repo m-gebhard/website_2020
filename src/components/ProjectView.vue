@@ -80,7 +80,7 @@
                                 slidesPerView:   1.05,
                                 slidesPerColumn: 2,
                             },
-                            421:  {
+                            701:  {
                                 slidesPerView:   2,
                                 slidesPerColumn: 2,
                             },

@@ -57,7 +57,8 @@
                         <div v-for="(image, i) in getImages"
                              :key="`project-overlay-image-#${i}`"
                              :style="getImageStyle(image)"
-                             class="swiper-slide">
+                             class="swiper-slide"
+                             @click.prevent="showLightbox(i)">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -65,6 +66,12 @@
                 <div class="project-overlay__hidden-block"></div>
             </div>
         </div>
+        <vue-easy-lightbox :visible="lightboxVisible"
+                           :imgs="getImagesWithPaths"
+                           :index="lightboxIndex"
+                           moveDisabled
+                           @hide="lightboxVisible = false">
+        </vue-easy-lightbox>
     </div>
 </template>
 
@@ -76,8 +83,10 @@
         name:     'project-overlay',
         data() {
             return {
-                project: null,
-                swiper:  null,
+                project:         null,
+                swiper:          null,
+                lightboxVisible: false,
+                lightboxIndex:   0,
             };
         },
         computed: {
@@ -100,6 +109,11 @@
             },
             getImages() {
                 return this.project.images;
+            },
+            getImagesWithPaths() {
+                return this.getImages.map((_image) => {
+                    return require(`./../assets/images/projects/${_image}`);
+                });
             },
             getFormattedProjectDescription() {
                 // Strip html tags and cut text after last sentence (.) within 500 words
@@ -141,6 +155,10 @@
             getImageStyle(image) {
                 const _image = require(`./../assets/images/projects/${image}`);
                 return `background-image: url('${_image}')`;
+            },
+            showLightbox(index) {
+                this.lightboxVisible = true;
+                this.lightboxIndex   = index;
             },
         },
         watch:    {

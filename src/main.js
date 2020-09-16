@@ -3,6 +3,7 @@ import Vue          from 'vue';
 import App          from './App.vue';
 import store        from './store';
 import Scrollspy    from 'vue2-scrollspy';
+import Lightbox     from 'vue-easy-lightbox';
 import SocialShaing from 'vue-social-sharing';
 
 // scss
@@ -40,6 +41,7 @@ library.add(faTimes, faEnvelope, faPlayCircle,
 // Components
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
+Vue.use(Lightbox);
 Vue.use(Scrollspy);
 Vue.use(SocialSharing);
 
