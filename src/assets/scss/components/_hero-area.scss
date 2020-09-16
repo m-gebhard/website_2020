@@ -88,10 +88,11 @@
     @include spacing(padding, xs, left right bottom);
     @include text(p2);
 
+    text-align: center;
     transition: color $transition-regular, opacity $transition-regular;
 
     &:after {
-        @include spacing(margin, xs, left right);
+        @include spacing(margin, xs, left);
 
         content: '|';
         color: var(--accent);
