@@ -13,7 +13,7 @@
                 </h2>
                 <p class="project-overlay__content-description" v-html="project.description"></p>
 
-                <social-sharing url="https://mgebhard.tk"
+                <social-sharing :url="getProjectUrl"
                                 title="Check out this project!"
                                 :description="getFormattedProjectDescription"
                                 :quote="project.title"
@@ -124,6 +124,9 @@
                 const thirdPointIndex = text.substr(0, 500).lastIndexOf('.');
 
                 return `${text.substr(0, thirdPointIndex)}.. Read more at:`;
+            },
+            getProjectUrl() {
+                return `${window.location.origin}/#/${this.project.slug}`;
             },
             getBreakpoints() {
                 return this.swiper

@@ -49,6 +49,7 @@
 
 <script>
     import { mapActions, mapGetters } from 'vuex';
+    import { projects }               from './utils/projects';
     import THEMES                     from './utils/themes';
     import AVAILABLE_TAGS             from './utils/availableTags';
     import HeroArea                   from './components/HeroArea';
@@ -83,6 +84,13 @@
         created() {
             this.updateTheme(window.localStorage.getItem('darkmode') === 'true');
         },
+        mounted() {
+            const hash = window.location.hash;
+
+            if (hash) {
+                this.openProjectBySlug(hash.split("#/")[1]);
+            }
+        },
         computed:   {
             ...mapGetters(['isAnyModalOpened', 'isDarkMode']),
 
@@ -91,7 +99,7 @@
             },
         },
         methods:    {
-            ...mapActions(['setSelectedFilter', 'setDarkMode']),
+            ...mapActions(['setSelectedFilter', 'setDarkMode', 'setModalOpenState']),
 
             updateFilter() {
                 this.setSelectedFilter(this.selectedFilter);
@@ -115,6 +123,18 @@
                     }, 500);
                 }
             },
+            openProjectBySlug(hash) {
+                const project = projects.find((_project) => _project.slug === hash);
+
+                if (project) {
+                    this.setModalOpenState({
+                        key:       'project-modal',
+                        openState: true,
+                        payload:   project,
+                    });
+                }
+                console.log(project, hash);
+            }
         },
         watch:      {
             isAnyModalOpened(state) {

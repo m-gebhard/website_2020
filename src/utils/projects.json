@@ -2,6 +2,7 @@
     "projects": [
         {
             "title": "X-Lights",
+            "slug": "x-lights",
             "category": "Led Controller [Node, VueJS, C++/#]",
             "tags": [
                 5,
@@ -21,6 +22,7 @@
         },
         {
             "title": "Spacepilot",
+            "slug": "space-pilot",
             "category": "Android Game [Monogame]",
             "tags": [
                 4
@@ -32,6 +34,7 @@
         },
         {
             "title": "BetterKLM",
+            "slug": "better-klm",
             "category": "Keyboard Light Manager [C#]",
             "tags": [
                 4
@@ -44,6 +47,7 @@
         },
         {
             "title": "Cherry Switch Breakout Board",
+            "slug": "cherry-max-board",
             "category": "Breakout Board [PCB, C++]",
             "tags": [
                 5,
@@ -60,6 +64,7 @@
         },
         {
             "title": "Liquicalc",
+            "slug": "liqui-calc",
             "category": "Liquid Calculator [Flutter]",
             "tags": [
                 6
