@@ -9,6 +9,7 @@
                     <input v-html="inputName"
                            id="name"
                            name="name"
+                           autocomplete="given-name"
                            required
                            type="text">
                 </div>
@@ -17,6 +18,7 @@
                     <input v-html="inputEmail"
                            id="email"
                            name="email"
+                           autocomplete="email"
                            required
                            type="email">
                 </div>

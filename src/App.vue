@@ -21,15 +21,17 @@
                         </h2>
                         <div class="project-filter__wrapper">
                             <font-awesome-icon icon="th-list"></font-awesome-icon>
-                            <select v-model="selectedFilter"
-                                    class="project-filter__select"
-                                    id="filter"
-                                    @change="updateFilter">
-                                <option v-for="(tag, i) in getAvailableTags"
-                                        :value="i">
-                                    {{ tag }}
-                                </option>
-                            </select>
+                            <div class="project-filter__select-wrapper">
+                                <select v-model="selectedFilter"
+                                        class="project-filter__select"
+                                        id="filter"
+                                        @change="updateFilter">
+                                    <option v-for="(tag, i) in getAvailableTags"
+                                            :value="i">
+                                        {{ tag }}
+                                    </option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </template>

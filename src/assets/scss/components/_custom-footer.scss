@@ -50,8 +50,17 @@
 }
 
 .custom-footer__anchor-list-item {
-    @include spacing(margin, s, left);
     @include text(h2);
+
+    margin-left: 30px;
+
+    @include bp(m) {
+        margin-left: 16px;
+
+        &:hover a svg {
+            color: var(--accent);
+        }
+    }
 
     a {
         @include spacing(padding, xs);
@@ -62,10 +71,8 @@
         }
     }
 
-    @include bp(m) {
-        &:hover a svg {
-            color: var(--accent);
-        }
+    &:first-of-type {
+        margin-left: 0 !important;
     }
 }
 

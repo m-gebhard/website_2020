@@ -57,9 +57,7 @@
         transform: scale(0);
         max-width: 0;
         overflow: hidden;
-        transition: transform $transition-regular,
-        margin-left $transition-regular,
-        max-width $transition-regular;
+        transition: transform $transition-regular;
         transform-origin: right;
     }
 

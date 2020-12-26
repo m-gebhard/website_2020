@@ -9,12 +9,16 @@
     cursor: pointer;
     background: var(--accent);
     border-radius: $border-radius-default;
-    transition: opacity $transition-fast;
+    transition: opacity $transition-fast, background $transition-fast;
 
     @include bp(m) {
         position: absolute;
         right: 20px;
         bottom: 20px;
+
+        &:hover {
+            background: var(--primary-light);
+        }
     }
 }
 
