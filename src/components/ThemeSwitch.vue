@@ -1,5 +1,7 @@
 <template>
-    <div class="theme-switch" v-scroll-spy-link="{selector: 'div'}">
+    <div class="theme-switch"
+         :class="{'theme-switch--transitioning': transitioning}"
+         v-scroll-spy-link="{selector: 'div'}">
         <div class="theme-switch__content"
              :class="{'theme-switch__content--checked' : value}">
             <input type="checkbox"
@@ -16,10 +18,20 @@
         props:   {
             value: {}
         },
+        data() {
+            return {
+                transitioning: false,
+            };
+        },
         methods: {
             onInput(event) {
                 const value = event.target.checked;
                 this.$emit('input', value);
+
+                this.transitioning = true;
+                setTimeout(() => {
+                    this.transitioning = false;
+                }, 500);
             },
         },
     };
