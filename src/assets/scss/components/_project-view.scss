@@ -5,6 +5,10 @@
     overflow: hidden;
 }
 
+.project-view .swiper-pagination {
+    position: relative;
+}
+
 .project-view__list {
     @include spacing(margin, s, top);
 

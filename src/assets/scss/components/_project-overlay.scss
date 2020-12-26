@@ -316,8 +316,10 @@
     @include text(p2);
 
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    justify-content: center;
 
+    min-height: 80px;
     font-weight: 300;
     cursor: pointer;
     color: var(--font-dark);
