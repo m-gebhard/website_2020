@@ -1,5 +1,6 @@
 <template>
-    <div class="page-section" :id="getId" :class="classes">
+    <div class="page-section" :id="getId" :class="classes" :style="style">
+        <div class="page-section-overlay" v-if="background"></div>
         <div class="page-section__content">
             <h2 v-if="!$slots.title && title" class="page-section__content-title">
                 {{ title }}
@@ -16,19 +17,25 @@
     export default {
         name:     'page-section',
         props:    {
-            title: {},
-            dark:  {
+            title:      {},
+            background: {},
+            dark:       {
                 default: false,
             },
-            edge:  {
+            edge:       {
                 default: false,
-            }
+            },
         },
         computed: {
             classes() {
                 return {
                     ['page-section--grey']: this.dark,
                     ['page-section--edge']: this.edge,
+                };
+            },
+            style() {
+                return {
+                    backgroundImage: `url(${this.background})`,
                 };
             },
             getId() {
