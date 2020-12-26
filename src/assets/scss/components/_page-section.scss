@@ -18,6 +18,12 @@
     }
 }
 
+.page-section--has-background {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
 .page-section-overlay {
     position: absolute;
     top: 0;
@@ -30,7 +36,7 @@
     background: var(--background-dark);
 
     @include bp(m) {
-        opacity: 0.75;
+        opacity: 0.8;
     }
 }
 
@@ -52,6 +58,7 @@
 
 .page-section__content {
     @include spacing(padding, l);
+    @include spacing(padding, huge, top bottom);
 
     position: relative;
     z-index: 2;

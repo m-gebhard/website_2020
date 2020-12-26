@@ -6,7 +6,7 @@ export default [
         '--accent':             '#aa66ff',
         '--background':         '#fff',
         '--background-dark':    '#f6f6f6',
-        '--background-darkest': '#e9e9e9',
+        '--background-darkest': '#efefef',
         '--font-light':         '#fff',
         '--font-dark':          '#232323',
         '--font-hero':          '#000',

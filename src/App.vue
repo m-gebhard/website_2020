@@ -1,5 +1,5 @@
 <template>
-    <main id="app">
+    <main id="app" ref="app">
         <div class="section-container"
              :class="{'transition-body' : isInTransition}"
              v-scroll-spy
@@ -38,7 +38,7 @@
                 <project-view></project-view>
             </page-section>
 
-            <page-section title="Contact">
+            <page-section title="Contact" background="background_xs.jpg">
                 <contact-box></contact-box>
             </page-section>
         </div>
@@ -107,23 +107,31 @@
                 this.setSelectedFilter(this.selectedFilter);
             },
             updateTheme(darkMode) {
-                const selectedTheme = THEMES[darkMode ? 1 : 0];
-                const html          = document.documentElement;
+                this.$nextTick(() => {
+                    const selectedTheme = THEMES[darkMode ? 1 : 0];
+                    const html          = document.documentElement;
 
-                if (selectedTheme) {
-                    Object.keys(selectedTheme).forEach((property) => {
-                        if (property === 'name') return;
-                        html.style.setProperty(property, selectedTheme[property]);
-                    });
-                    this.isInTransition = true;
+                    if (darkMode) {
+                        this.$refs['app'].classList.add('dark');
+                    } else {
+                        this.$refs['app'].classList.remove('dark');
+                    }
 
-                    this.setDarkMode(darkMode);
-                    window.localStorage.setItem('darkmode', darkMode);
+                    if (selectedTheme) {
+                        Object.keys(selectedTheme).forEach((property) => {
+                            if (property === 'name') return;
+                            html.style.setProperty(property, selectedTheme[property]);
+                        });
+                        this.isInTransition = true;
 
-                    setTimeout(() => {
-                        this.isInTransition = false;
-                    }, 500);
-                }
+                        this.setDarkMode(darkMode);
+                        window.localStorage.setItem('darkmode', darkMode);
+
+                        setTimeout(() => {
+                            this.isInTransition = false;
+                        }, 500);
+                    }
+                })
             },
             openProjectBySlug(hash) {
                 const project = projects.find((_project) => _project.slug === hash);
@@ -135,7 +143,6 @@
                         payload:   project,
                     });
                 }
-                console.log(project, hash);
             }
         },
         watch:      {

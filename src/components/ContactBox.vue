@@ -6,30 +6,36 @@
             <div class="contact-box__row">
                 <div class="contact-box__input">
                     <label for="name">Name</label>
-                    <input v-html="inputName"
-                           id="name"
-                           name="name"
-                           autocomplete="given-name"
-                           required
-                           type="text">
+                    <div>
+                        <input v-html="inputName"
+                               id="name"
+                               name="name"
+                               autocomplete="given-name"
+                               required
+                               type="text">
+                    </div>
                 </div>
                 <div class="contact-box__input">
                     <label for="email">Email</label>
-                    <input v-html="inputEmail"
-                           id="email"
-                           name="email"
-                           autocomplete="email"
-                           required
-                           type="email">
+                    <div>
+                        <input v-html="inputEmail"
+                               id="email"
+                               name="email"
+                               autocomplete="email"
+                               required
+                               type="email">
+                    </div>
                 </div>
             </div>
             <div class="contact-box__row">
                 <div class="contact-box__input">
                     <label for="message">Message</label>
-                    <textarea required
-                              name="message"
-                              id="message">
-                    </textarea>
+                    <div>
+                        <textarea required
+                                  name="message"
+                                  id="message">
+                        </textarea>
+                    </div>
                 </div>
             </div>
             <button class="contact-box__form-submit" type="submit">
@@ -38,7 +44,10 @@
             </button>
         </form>
         <div class="contact-box__details">
-            <h3>Say <span>Hello</span>!</h3>
+            <h3>Say
+                <span>Hello</span>
+                !
+            </h3>
             <p class="contact-box__details-info">
                 Contact me and I’ll get back to you within a day.
             </p>

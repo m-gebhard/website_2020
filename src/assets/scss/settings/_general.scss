@@ -109,6 +109,28 @@ hr {
     background: var(--primary);
 }
 
+input, textarea {
+    // overwrite autofill styles
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s, border-color $transition-fast;
+        -webkit-text-fill-color: var(--font-dark) !important;
+        background: none !important;
+        -webkit-box-shadow: 0 0 0px 1000px var(--background-dark) inset;
+    }
+}
+
+.dark input, .dark textarea {
+    // overwrite autofill styles
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        background: var(--background-dark);
+    }
+}
 
 .swiper-pagination {
     @include spacing(margin, xs, bottom);

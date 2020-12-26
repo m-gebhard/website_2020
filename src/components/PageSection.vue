@@ -29,13 +29,16 @@
         computed: {
             classes() {
                 return {
-                    ['page-section--grey']: this.dark,
-                    ['page-section--edge']: this.edge,
+                    ['page-section--grey']:           this.dark,
+                    ['page-section--edge']:           this.edge,
+                    ['page-section--has-background']: this.background,
                 };
             },
             style() {
+                if (!this.background) return;
+
                 return {
-                    backgroundImage: `url(${this.background})`,
+                    backgroundImage: `url(${require('./../assets/images/' + this.background)})`,
                 };
             },
             getId() {
