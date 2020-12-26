@@ -5,6 +5,7 @@
     width: 100vw;
     height: 100vh;
 
+    z-index: 100;
     opacity: 0;
     pointer-events: none;
     color: var(--font-dark);
@@ -310,10 +311,34 @@
     }
 }
 
+.project-overlay__content-close-bottom {
+    @include spacing(margin, huge, top);
+    @include text(p2);
+
+    display: flex;
+    flex-flow: column wrap;
+
+    font-weight: 300;
+    cursor: pointer;
+    color: var(--font-dark);
+    text-align: center;
+    opacity: 0.8;
+
+    i {
+        transition: transform $transition-fast;
+    }
+
+    @include bp(m) {
+        &:hover i {
+            transform: translateY(3px);
+        }
+    }
+}
+
 .project-overlay__hidden-block {
     width: 100%;
-    min-height: 50px;
-    max-height: 50px;
+    min-height: 30px;
+    max-height: 30px;
 }
 
 @keyframes fadeIn {

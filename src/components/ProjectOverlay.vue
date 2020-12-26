@@ -63,6 +63,15 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
+
+                <div class="project-overlay__content-description-link project-overlay__content-close-bottom"
+                     @click.prevent="close">
+                    Go Back
+                    <i>
+                        <font-awesome-icon icon="caret-down"></font-awesome-icon>
+                    </i>
+                </div>
+
                 <div class="project-overlay__hidden-block"></div>
             </div>
         </div>
