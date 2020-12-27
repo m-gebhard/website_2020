@@ -18,6 +18,14 @@
     }
 }
 
+.page-section--has-border-top {
+    border-top: 3px solid var(--background);
+}
+
+.page-section--has-border-bottom {
+    border-bottom: 3px solid var(--background);
+}
+
 .page-section--has-background {
     background-repeat: no-repeat;
     background-position: center;

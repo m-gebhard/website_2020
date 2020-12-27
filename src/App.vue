@@ -38,7 +38,7 @@
                 <project-view></project-view>
             </page-section>
 
-            <page-section title="Contact" background="background_xs.jpg">
+            <page-section title="Contact" background="background_xs.jpg" borderTop>
                 <contact-box></contact-box>
             </page-section>
         </div>

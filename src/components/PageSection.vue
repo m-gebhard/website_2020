@@ -22,22 +22,26 @@
     export default {
         name:     'page-section',
         props:    {
-            title:      {},
-            subtitle:   {},
-            background: {},
-            dark:       {
+            title:        {},
+            subtitle:     {},
+            background:   {},
+            borderTop:    { type: Boolean },
+            borderBottom: { type: Boolean },
+            dark:         {
                 default: false,
             },
-            edge:       {
+            edge:         {
                 default: false,
             },
         },
         computed: {
             classes() {
                 return {
-                    ['page-section--grey']:           this.dark,
-                    ['page-section--edge']:           this.edge,
-                    ['page-section--has-background']: this.background,
+                    ['page-section--grey']:              this.dark,
+                    ['page-section--edge']:              this.edge,
+                    ['page-section--has-background']:    this.background,
+                    ['page-section--has-border-top']:    this.borderTop,
+                    ['page-section--has-border-bottom']: this.borderBottom,
                 };
             },
             style() {
