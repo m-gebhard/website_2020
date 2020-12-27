@@ -2,14 +2,14 @@
     "skills": [
         {
             "name": "PHP",
-            "percentage": 75
+            "percentage": 85
         },
         {
-            "name": "HTML<br>CSS",
-            "percentage": 90
+            "name": "HTML/SCSS",
+            "percentage": 100
         },
         {
-            "name": "JS",
+            "name": "JavaScript",
             "percentage": 90,
             "color": "#abd8fb"
         },

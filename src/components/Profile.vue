@@ -39,8 +39,10 @@
                         <li v-for="(skill, i) in getSkills"
                             :key="`profile-chart-item-#${i}`"
                             :style="chartItemStyle(skill)"
-                            v-html="skill.name"
-                            class="profile__item-chart-item">
+                            class="profile__item-chart-item"
+                            :class="`profile__item-chart-item--${i}`">
+                            <span>{{ skill.percentage }}%</span>
+                            {{ skill.name }}
                         </li>
                     </ul>
                 </div>
@@ -52,30 +54,32 @@
                     </div>
                     <div class="profile__item-description">
                         I have 4 years of frontend experience with the following technologies:<br><br>
-                        <a class="profile__item-description--link profile__item-description--link-with-icon"
-                           href="https://en.wikipedia.org/wiki/HTML5"
-                           target="_blank">
-                            HTML5
-                            <font-awesome-icon :icon="['fab', 'html5']"></font-awesome-icon>
-                        </a>
-                        <a class="profile__item-description--link profile__item-description--link-with-icon"
-                           href="https://vuejs.org/"
-                           target="_blank">
-                            Vue.js
-                            <font-awesome-icon :icon="['fab', 'vuejs']"></font-awesome-icon>
-                        </a>
-                        <a class="profile__item-description--link profile__item-description--link-with-icon"
-                           href="https://sass-lang.com/"
-                           target="_blank">
-                            SASS
-                            <font-awesome-icon :icon="['fab', 'sass']"></font-awesome-icon>
-                        </a>
-                        <a class="profile__item-description--link profile__item-description--link-with-icon"
-                           href="https://getbootstrap.com/"
-                           target="_blank">
-                            Bootstrap
-                            <font-awesome-icon :icon="['fab', 'bootstrap']"></font-awesome-icon>
-                        </a>
+                        <div>
+                            <a class="profile__item-description--link profile__item-description--link-with-icon"
+                               href="https://en.wikipedia.org/wiki/HTML5"
+                               target="_blank">
+                                HTML5
+                                <font-awesome-icon :icon="['fab', 'html5']"></font-awesome-icon>
+                            </a>
+                            <a class="profile__item-description--link profile__item-description--link-with-icon"
+                               href="https://vuejs.org/"
+                               target="_blank">
+                                Vue.js
+                                <font-awesome-icon :icon="['fab', 'vuejs']"></font-awesome-icon>
+                            </a>
+                            <a class="profile__item-description--link profile__item-description--link-with-icon"
+                               href="https://sass-lang.com/"
+                               target="_blank">
+                                SASS
+                                <font-awesome-icon :icon="['fab', 'sass']"></font-awesome-icon>
+                            </a>
+                            <a class="profile__item-description--link profile__item-description--link-with-icon"
+                               href="https://getbootstrap.com/"
+                               target="_blank">
+                                Bootstrap
+                                <font-awesome-icon :icon="['fab', 'bootstrap']"></font-awesome-icon>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -86,24 +90,26 @@
                     </div>
                     <div class="profile__item-description">
                         I have 3 years of backend experience with the following technologies:<br><br>
-                        <a class="profile__item-description--link profile__item-description--link-with-icon"
-                           href="https://nodejs.org/en/"
-                           target="_blank">
-                            node.js
-                            <font-awesome-icon :icon="['fab', 'node-js']"></font-awesome-icon>
-                        </a>
-                        <a class="profile__item-description--link profile__item-description--link-with-icon"
-                           href="https://en.wikipedia.org/wiki/PHP"
-                           target="_blank">
-                            PHP7
-                            <font-awesome-icon :icon="['fab', 'php']"></font-awesome-icon>
-                        </a>
-                        <a class="profile__item-description--link profile__item-description--link-with-icon"
-                           href="https://laravel.com/"
-                           target="_blank">
-                            Laravel
-                            <font-awesome-icon :icon="['fab', 'laravel']"></font-awesome-icon>
-                        </a>
+                        <div>
+                            <a class="profile__item-description--link profile__item-description--link-with-icon"
+                               href="https://nodejs.org/en/"
+                               target="_blank">
+                                node.js
+                                <font-awesome-icon :icon="['fab', 'node-js']"></font-awesome-icon>
+                            </a>
+                            <a class="profile__item-description--link profile__item-description--link-with-icon"
+                               href="https://en.wikipedia.org/wiki/PHP"
+                               target="_blank">
+                                PHP7
+                                <font-awesome-icon :icon="['fab', 'php']"></font-awesome-icon>
+                            </a>
+                            <a class="profile__item-description--link profile__item-description--link-with-icon"
+                               href="https://laravel.com/"
+                               target="_blank">
+                                Laravel
+                                <font-awesome-icon :icon="['fab', 'laravel']"></font-awesome-icon>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -134,13 +140,16 @@
         name:     'profile',
         computed: {
             getSkills() {
-                return skills;
+                const _skills = skills;
+                _skills.sort((_a, _b) => _b.percentage - _a.percentage);
+
+                return _skills;
             },
         },
         methods:  {
             chartItemStyle(item) {
                 return {
-                    height: `${item.percentage}%`,
+                    width: `${item.percentage}%`,
                 };
             },
         },

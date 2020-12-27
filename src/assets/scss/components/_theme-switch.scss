@@ -43,9 +43,13 @@
 }
 
 .theme-switch--transitioning .theme-switch__content svg {
-    animation-name: bubble;
+    animation-name: bubble-backwards;
     animation-delay: 0s;
     animation-duration: $transition-fast;
+}
+
+.theme-switch--transitioning .theme-switch__content--checked svg {
+    animation-name: bubble;
 }
 
 .theme-switch__content--checked {
@@ -63,5 +67,17 @@
     }
     100% {
         transform: translate(-50%, -50%) scaleX(-1);
+    }
+}
+
+@keyframes bubble-backwards {
+    0% {
+        transform: translate(-50%, -50%) scaleX(-1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scaleX(0.5);
+    }
+    100% {
+        transform: translate(-50%, -50%) scaleX(1);
     }
 }
