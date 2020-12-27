@@ -22,21 +22,31 @@
         @include spacing(margin, s, right);
         @include text(p2);
 
+        display: none;
         color: var(--primary);
+
+        @media all and (min-width: 375px) {
+            display: block;
+        }
     }
 }
 
 .project-filter__select {
     @include spacing(padding, xs);
-    @include spacing(padding, s, left right);
+    @include spacing(padding, s, left);
     @include text(p3);
 
+    width: 100%;
+    padding-right: 35px !important;
     position: relative;
     outline: none;
     border: none;
     -webkit-appearance: none;
     color: var(--font-dark);
     background: var(--background-darkest);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .project-filter__select-wrapper {
@@ -46,7 +56,7 @@
         content: '';
         position: absolute;
         top: 50%;
-        right: 0;
+        right: -5px;
         width: 50px;
         height: 50px;
         transform: translateY(-50%);
