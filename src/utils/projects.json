@@ -3,6 +3,7 @@
         {
             "title": "X-Lights",
             "slug": "x-lights",
+            "type": 0,
             "category": "Led Controller [Node, VueJS, C++/#]",
             "tags": [
                 5,
@@ -23,6 +24,7 @@
         {
             "title": "Spacepilot",
             "slug": "space-pilot",
+            "type": 0,
             "category": "Android Game [Monogame]",
             "tags": [
                 4
@@ -35,6 +37,7 @@
         {
             "title": "BetterKLM",
             "slug": "better-klm",
+            "type": 0,
             "category": "Keyboard Light Manager [C#]",
             "tags": [
                 4
@@ -48,6 +51,7 @@
         {
             "title": "Cherry Switch Breakout Board",
             "slug": "cherry-mx-board",
+            "type": 1,
             "category": "Breakout Board [PCB, C++]",
             "tags": [
                 5,
@@ -65,6 +69,7 @@
         {
             "title": "Liquicalc",
             "slug": "liqui-calc",
+            "type": 0,
             "category": "Liquid Calculator [Flutter]",
             "tags": [
                 6

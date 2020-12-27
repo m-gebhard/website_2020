@@ -122,9 +122,11 @@
                     <p class="profile__item-description">
                         Besides web programming I also love to build apps and small desktop games.
                         Back then in C# / Java, now with Dart and Javascript, and there's always more to explore!
-                        Take a look at my
+                        <br>
+                        IoT applications are also really interesting to me, a start into that topic was my project X-Lights.
+                        Take a look at the
                         <span class="profile__item-description--link"
-                              @click="$parent.$parent.$scrollTo(2)">projects</span>
+                              @click="$parent.$parent.$scrollTo(2)">project section</span>
                         to learn more.
                     </p>
                 </div>

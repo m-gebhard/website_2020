@@ -247,6 +247,6 @@
 
 @for $i from 0 through 9 {
     .profile__item-chart-item--#{$i} {
-        transition-delay: 0.5s + (0.2s * $i);
+        transition-delay: 0.2s + (0.2s * $i);
     }
 }

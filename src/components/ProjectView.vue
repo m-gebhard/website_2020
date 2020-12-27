@@ -5,7 +5,8 @@
                 :key="`project-view-item-#${i}`"
                 class="project-view__list-item swiper-slide"
                 @click="openProject(project)">
-                <div class="project-view__list-item-content">
+                <div class="project-view__list-item-content"
+                     :class="`project-view__list-item-content--type-${project.type}`">
                     <h3 class="project-view__list-item-title">
                         {{ project.title }}
                     </h3>

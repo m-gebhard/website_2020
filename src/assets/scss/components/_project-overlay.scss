@@ -53,6 +53,8 @@
 }
 
 .project-overlay__content-title {
+    font-weight: 400;
+
     &:after {
         left: 50%;
         transform: translateX(-50%);

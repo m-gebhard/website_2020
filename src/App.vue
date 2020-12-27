@@ -53,7 +53,7 @@
     import { mapActions, mapGetters } from 'vuex';
     import { projects }               from './utils/projects';
     import THEMES                     from './utils/themes';
-    import AVAILABLE_TAGS             from './utils/availableTags';
+    import { AVAILABLE_TAGS }         from './utils/projectMeta';
     import HeroArea                   from './components/HeroArea';
     import PageSection                from './components/PageSection';
     import ProjectView                from './components/ProjectView';
@@ -90,7 +90,7 @@
             const hash = window.location.hash;
 
             if (hash) {
-                this.openProjectBySlug(hash.split("#/")[1]);
+                this.openProjectBySlug(hash.split('#/')[1]);
             }
         },
         computed:   {
@@ -131,7 +131,7 @@
                             this.isInTransition = false;
                         }, 500);
                     }
-                })
+                });
             },
             openProjectBySlug(hash) {
                 const project = projects.find((_project) => _project.slug === hash);
