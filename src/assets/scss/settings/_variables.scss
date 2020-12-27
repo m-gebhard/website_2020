@@ -53,7 +53,8 @@ $spacings: (
     l: 30px 30px 35px 35px 40px,
     xl: 20px 40px 75px 140px 260px,
     huge: 20px 40px 50px 50px 55px,
-    headline: 25px 35px 35px 40px 40px,
+    headline: 35px 45px 45px 50px 55px,
+    subheadline: 60px 65px 70px 80px 85px,
 );
 
 $fonts: (
@@ -65,7 +66,7 @@ $fonts: (
         letterspacing: 0.01em,
     ),
     h2: (
-        size: 26.00px 26.00px 28.00px 28.00px 30.00px,
+        size: 32.00px 34.00px 38.00px 38.00px 40.00px,
         height: 34.00px 34.00px 38.00px 38.00px 42.00px,
         family: $font-default,
         letterspacing: 0.01em,
@@ -93,5 +94,11 @@ $fonts: (
         height: 20.00px 20.00px 21.00px 21.00px 21.00px,
         family: $font-default,
         letterspacing: 0.01em,
-    )
+    ),
+    icon: (
+        size: 26.00px 26.00px 28.00px 28.00px 30.00px,
+        height: 34.00px 34.00px 38.00px 38.00px 42.00px,
+        family: $font-default,
+        letterspacing: 0.01em,
+    ),
 );

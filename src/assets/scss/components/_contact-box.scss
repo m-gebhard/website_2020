@@ -44,7 +44,8 @@
 .contact-box__form-submit {
     @include spacing(padding, m, left right);
     @include spacing(padding, s, top bottom);
-    @include spacing(margin, m, top bottom);
+    @include spacing(margin, m, bottom);
+    @include spacing(margin, m, top);
     @include text(p3);
 
     width: 100%;
@@ -67,7 +68,6 @@
 
     @include bp(m) {
         width: auto;
-        margin-top: 0;
 
         &:hover {
             background: var(--primary-light);

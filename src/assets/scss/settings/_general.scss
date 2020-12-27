@@ -41,7 +41,7 @@ h1 {
 }
 
 h2 {
-    @include spacing(margin, l, bottom);
+    @include spacing(margin, headline, bottom);
     @include text(h2);
 
     position: relative;
@@ -51,17 +51,17 @@ h2 {
     &:after {
         position: absolute;
         left: 50%;
-        bottom: -10px;
+        bottom: -20px;
 
         content: '';
         display: block;
-        width: 70px;
+        width: 60px;
         height: 2px;
         transform: translateX(-50%);
         background: linear-gradient(50deg, var(--primary-light), var(--accent));
 
         @include bp(m) {
-            width: 100px;
+            width: 75px;
         }
     }
 
@@ -70,7 +70,6 @@ h2 {
 
         &:after {
             left: 0;
-            bottom: -10px;
             transform: none;
         }
     }

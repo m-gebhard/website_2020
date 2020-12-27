@@ -43,7 +43,7 @@
 }
 
 .hero-area__title {
-    font-weight: 600;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
@@ -88,6 +88,7 @@
     @include spacing(padding, xs, left right bottom);
     @include text(p2);
 
+    font-weight: 300;
     text-align: center;
     transition: color $transition-regular, opacity $transition-regular;
 

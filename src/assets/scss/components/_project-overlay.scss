@@ -159,7 +159,7 @@
         opacity: 0.75;
 
         span:not(.project-overlay__content-share-buttons-title) {
-            @include text(h2);
+            @include text(icon);
 
             cursor: pointer;
             transition: color $transition-fast, opacity $transition-fast;

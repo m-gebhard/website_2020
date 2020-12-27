@@ -76,7 +76,35 @@
 }
 
 .page-section__content-title {
-    @include spacing(margin, headline, bottom);
+    @include text(h2);
+
+    font-weight: 300;
+}
+
+.page-section__content-title--centered {
+    text-align: center;
+}
+
+.page-section__content-subtitle {
+    @include spacing(margin, subheadline, bottom);
+    @include text(p2);
+
+    align-self: center;
+    max-width: 90%;
+    opacity: 0.75;
+    font-weight: 300;
+    text-align: center;
+    color: var(--font-dark);
+
+    @include bp(m) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 75%;
+    }
+
+    @include bp(l) {
+        align-self: auto;
+    }
 }
 
 .page-section__content-title--no-margin {

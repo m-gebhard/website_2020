@@ -1,5 +1,5 @@
 .project-filter {
-    @include spacing(margin, l, bottom);
+    @include spacing(margin, headline, bottom);
     @include spacing(margin, l, top);
 
     display: flex;

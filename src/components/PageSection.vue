@@ -2,9 +2,14 @@
     <div class="page-section" :id="getId" :class="classes" :style="style">
         <div class="page-section-overlay" v-if="background"></div>
         <div class="page-section__content">
-            <h2 v-if="!$slots.title && title" class="page-section__content-title">
-                {{ title }}
-            </h2>
+            <template v-if="!$slots.title && title">
+                <h2 class="page-section__content-title">
+                    {{ title }}
+                </h2>
+                <p v-if="subtitle" class="page-section__content-subtitle">
+                    {{ subtitle }}
+                </p>
+            </template>
             <template v-else-if="$slots.title">
                 <slot name="title"></slot>
             </template>
@@ -18,6 +23,7 @@
         name:     'page-section',
         props:    {
             title:      {},
+            subtitle:   {},
             background: {},
             dark:       {
                 default: false,
