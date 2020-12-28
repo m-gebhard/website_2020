@@ -1,10 +1,12 @@
 <template>
     <div class="project-view">
-        <ul class="swiper-wrapper project-view__list">
-            <li v-for="(project, i) in getFilteredProjects"
+        <transition-group tag="ul" name="list" class="swiper-wrapper project-view__list">
+            <li v-for="(project, i) in getProjects"
                 :key="`project-view-item-#${i}`"
+                v-if="isProjectVisible(project)"
                 class="project-view__list-item swiper-slide"
                 @click="openProject(project)">
+
                 <div class="project-view__list-item-content"
                      :class="`project-view__list-item-content--type-${project.type}`">
                     <h3 class="project-view__list-item-title">
@@ -19,7 +21,7 @@
                     </div>
                 </div>
             </li>
-        </ul>
+        </transition-group>
         <div class="swiper-pagination"></div>
     </div>
 </template>
@@ -62,6 +64,9 @@
                     payload:   project,
                 });
             },
+            isProjectVisible(project) {
+                return this.getFilteredProjects.indexOf(project) !== -1;
+            },
             getTeaserImageStyle(project) {
                 if (project && project.images.length > 0) {
                     const image = require(`./../assets/images/projects/${project.images[0]}`);
@@ -100,7 +105,9 @@
         },
         watch:    {
             'getSelectedFilter'() {
-                this.initSwiper();
+                this.$nextTick(() => {
+                    this.swiper.update();
+                });
             },
         },
     };

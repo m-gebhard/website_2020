@@ -24,6 +24,7 @@
 
     user-select: none;
     color: var(--font-dark);
+    transition: all $transition-regular;
     border-radius: $border-radius-default;
 }
 
@@ -92,6 +93,10 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: $border-radius-default / 2;
+
+    @include bp(l) {
+        height: 170px;
+    }
 }
 
 // project types stylings

@@ -6,16 +6,19 @@
 .page-section {
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 80vh;
+    min-height: 75vh;
     text-align: center;
     border-radius: $border-radius-default;
-
+    align-items: center;
     @include bp(m) {
         text-align: left;
     }
+}
+
+.page-section--v-align-center {
+    align-items: center;
 }
 
 .page-section--has-border-top {

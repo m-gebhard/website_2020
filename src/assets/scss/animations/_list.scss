@@ -1,7 +1,17 @@
-.list-enter-active, .list-leave-active {
-    transition: all $transition-long;
+.list-leave {
+    position: absolute;
+    z-index: -1;
 }
-.list-enter, .list-leave-to {
+
+.list-leave-active {
     opacity: 0;
-    transform: translateY(20px);
+}
+
+.list-enter {
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+.list-move {
+    transition: transform $transition-regular;
 }
