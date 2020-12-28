@@ -1,6 +1,6 @@
 #about {
     .page-section__content-title {
-        @include spacing(margin, headline, bottom);
+        @include spacing(margin, subheadline, bottom);
 
         text-align: center;
 
@@ -26,16 +26,17 @@
 .profile__item {
     @include spacing(margin, headline, bottom);
 
+    position: static;
     padding-top: 35px;
     flex: 1 0 auto;
 
     > div {
         @include spacing(padding, m, bottom);
 
+        position: relative;
         margin-top: -35px;
         margin-bottom: -15px;
         align-self: center;
-        position: relative;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -47,20 +48,22 @@
             content: '';
             position: absolute;
             bottom: 0;
-            left: 0;
-            width: 100%;
+            left: 50%;
+            width: 50%;
             height: 2px;
             opacity: 0.25;
+            transform: translateX(-50%);
             background: linear-gradient(to right, var(--primary), var(--accent));
         }
 
         @include bp(m) {
+            position: static;
             width: 100%;
-            text-align: left;
         }
     }
 
     @include bp(m) {
+        position: relative;
         padding: 35px;
         align-self: stretch;
         flex: 1 0 calc(50% - 20px);
@@ -97,10 +100,6 @@
         opacity: 0.75;
         color: var(--primary);
     }
-
-    @include bp(m) {
-        align-self: flex-start;
-    }
 }
 
 .profile__item--skill {
@@ -111,13 +110,11 @@
     }
 
     > div:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(to right, var(--primary), var(--accent));
+        content: none;
+    }
+
+    @include bp(m) {
+        @include spacing(margin, headline, top);
     }
 
     //&:nth-of-type(4):after {
@@ -159,7 +156,7 @@
 
     svg {
         @include spacing(margin, xs, left);
-        @include text(h2);
+        @include text(icon);
 
         opacity: 0.75;
         color: var(--accent);

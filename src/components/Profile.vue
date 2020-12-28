@@ -32,6 +32,22 @@
             <li class="profile__item">
                 <div>
                     <div class="profile__item-head">
+                        <font-awesome-icon icon="rocket"></font-awesome-icon>
+                        <h3>Apps and Games</h3>
+                    </div>
+                    <p class="profile__item-description">
+                        Besides web programming I also love to build apps and small desktop games.
+                        Back then in C# / Java, now with Dart and Javascript, and there's always more to explore!
+                        Take a look at the
+                        <span class="profile__item-description--link"
+                              @click="$parent.$parent.$scrollTo(2)">project section</span>
+                        to learn more.
+                    </p>
+                </div>
+            </li>
+            <li class="profile__item profile__item--skill">
+                <div>
+                    <div class="profile__item-head">
                         <font-awesome-icon icon="chart-bar"></font-awesome-icon>
                         <h3>Coding Skills</h3>
                     </div>
@@ -111,24 +127,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
-            </li>
-            <li class="profile__item profile__item--skill">
-                <div>
-                    <div class="profile__item-head">
-                        <font-awesome-icon icon="rocket"></font-awesome-icon>
-                        <h3>Apps and Games</h3>
-                    </div>
-                    <p class="profile__item-description">
-                        Besides web programming I also love to build apps and small desktop games.
-                        Back then in C# / Java, now with Dart and Javascript, and there's always more to explore!
-                        <br>
-                        IoT applications are also really interesting to me, a start into that topic was my project X-Lights.
-                        Take a look at the
-                        <span class="profile__item-description--link"
-                              @click="$parent.$parent.$scrollTo(2)">project section</span>
-                        to learn more.
-                    </p>
                 </div>
             </li>
         </ul>
