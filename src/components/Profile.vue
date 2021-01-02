@@ -26,6 +26,10 @@
                         My main focus is frontend development, I love to build fancy websites and share my designs and
                         ideas
                         with customers. Besides frontend programming I also do backend and app-programming.
+                        <a href="https://github.com/m-gebhard" target="_blank">
+                            Projects on GitHub
+                            <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                        </a>
                     </p>
                 </div>
             </li>

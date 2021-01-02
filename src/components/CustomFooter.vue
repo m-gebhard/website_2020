@@ -8,7 +8,7 @@
                     and
                     <font-awesome-icon icon="coffee"></font-awesome-icon>.
                 </span>
-                <span>&copy 2020 - Marius Gebhard</span>
+                <span>&copy 2021 - Marius Gebhard</span>
             </div>
             <ul class="custom-footer__anchor-list">
                 <li class="custom-footer__anchor-list-item">
