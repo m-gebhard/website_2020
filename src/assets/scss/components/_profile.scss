@@ -147,6 +147,11 @@
     font-weight: 900;
 }
 
+.profile__item-description--link-light {
+    @extend .profile__item-description--link;
+    font-weight: 300;
+}
+
 .profile__item-description--link-with-icon {
     @include spacing(padding, xs);
     @include text(p3);

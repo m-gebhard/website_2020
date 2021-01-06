@@ -43,8 +43,8 @@
                         Besides web programming I also love to build apps and small desktop games.
                         Back then in C# / Java, now with Dart and Javascript, and there's always more to explore!
                         Take a look at the
-                        <span class="profile__item-description--link"
-                              @click="$parent.$parent.$scrollTo(2)">project section</span>
+                        <a href="#" class="profile__item-description--link-light"
+                              @click.prevent="$parent.$parent.$scrollTo(2)">project section</a>
                         to learn more.
                     </p>
                 </div>
