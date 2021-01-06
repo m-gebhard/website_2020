@@ -221,4 +221,12 @@
             color: var(--font-dark);
         }
     }
+
+    a {
+        @include bp(m) {
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
 }
