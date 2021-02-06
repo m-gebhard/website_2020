@@ -10,8 +10,7 @@
         },
         {
             "name": "JavaScript",
-            "percentage": 90,
-            "color": "#abd8fb"
+            "percentage": 90
         },
         {
             "name": "Dart",
@@ -19,7 +18,11 @@
         },
         {
             "name": "C#",
-            "percentage": 60
+            "percentage": 40
+        },
+        {
+            "name": "Python",
+            "percentage": 45
         }
     ]
 }
