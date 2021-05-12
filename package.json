@@ -13,7 +13,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "core-js": "^3.6.4",
     "css-vars": "^2.2.0",
-    "swiper": "^5.3.6",
+    "swiper": "^6.5.1",
     "vue": "^2.6.11",
     "vue-easy-lightbox": "^0.14.0",
     "vue-social-sharing": "^2.4.7",
