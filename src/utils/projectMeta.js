@@ -6,7 +6,8 @@ export const AVAILABLE_TAGS = {
     4: 'C#',
     5: 'C++',
     6: 'Dart',
-    7: 'Electronics'
+    7: 'Electronics',
+    8: 'Python'
 };
 
 export const PROJECT_TYPES = {

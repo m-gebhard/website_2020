@@ -1,6 +1,23 @@
 {
     "projects": [
         {
+            "title": "DatingApp",
+            "slug": "dating-app",
+            "type": 0,
+            "category": "Dating App [Flutter, Django, Firebase]",
+            "tags": [
+                6,
+                8
+            ],
+            "images": [
+                "da1.jpg",
+                "da2.jpg",
+                "da3.jpg",
+                "da4.jpg"
+            ],
+            "description": "Learning new technologies will always be fun I guess. With this project I was able to learn Python's Django framework and improve my skills with Flutter. But not only that - I think with this project there will be more benefit than just learning new things. It is a dating app made to connect people, whom might even be able to find their love there.. My plan is to release the app on Android and later iOS - the Alpha phase is starting very soon. The future of this project is still unknown so there are no public repositories at the moment. If you are interested in becoming a tester for the app use the contact form on this page to contact me. Stay tuned! ;)"
+        },
+        {
             "title": "X-Lights",
             "slug": "x-lights",
             "type": 0,
