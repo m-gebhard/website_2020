@@ -1,28 +1,28 @@
 {
     "skills": [
         {
-            "name": "PHP",
-            "percentage": 85
-        },
-        {
             "name": "HTML / SCSS",
             "percentage": 100
         },
         {
             "name": "JavaScript",
-            "percentage": 90
+            "percentage": 95
+        },
+        {
+            "name": "PHP",
+            "percentage": 85
         },
         {
             "name": "Dart",
-            "percentage": 55
+            "percentage": 70
+        },
+        {
+            "name": "Python",
+            "percentage": 65
         },
         {
             "name": "C#",
             "percentage": 40
-        },
-        {
-            "name": "Python",
-            "percentage": 45
         }
     ]
 }

@@ -9,8 +9,8 @@
                     </div>
                     <p class="profile__item-description">
                         My Name is Marius Gebhard.<br>
-                        I am 23 years old and I live in Mannheim, Germany.
-                        In my free time I like to code and do sports.
+                        I am 24 years old and I live in Mannheim, Germany.
+                        In my free time I like to code, make music and do graphics design.
                         What do I code? Anything you can imagine - it just depends on the project I am working on.
                     </p>
                 </div>
